@@ -1,4 +1,37 @@
-﻿title: Act_I
+﻿title: intro
 ---
-This is an example of a Yarn Spinner script. Write your dialogue here!
+You find yourself at The Meeting House.
+
+You are Mother. 
+
+As the doors close behind you, a gust of summer air blows into the space. Your hair is plastered to your forehead and neck.
+
+The whispers, cries, and prayers of the attending townspeople are nearly as suffocating as their body odor.
+-> It's simple and austere. It serves its purpose well.
+-> It's stuffy and distracting. Not an ounce of room to breathe.
+-> It's heavy and intense. You've witnessed girls meet their final fate here.
+
+Narrow wooden benches, occupied by village men, are shoved up against the rough-hewn walls. Candlelight casts an orange shimmer across the dark canopy overhead. But that matters not to you.
+
+There's one person, and only one person, on your mind.
+
+Your daughter, Prudence. The Maiden.
+
+You look frantically around for her...but she is nowhere in sight.
+<<jump observing>>
+===
+
+title: observing
+---
+<<declare $allObserved to false>>
+As more figures shuffle into The Meeting House, your eyes begin to wander…
+
+<<if $allObserved is true>>
+	<<jump Entrances>>
+<<endif>>
+===
+
+title: Entrances
+---
+Starts here!
 ===
