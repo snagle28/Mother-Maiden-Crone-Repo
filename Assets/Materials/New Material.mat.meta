@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Materials/Wood6.mat.meta
+guid: 6699b7757442de94eb71d53c835f9555
+========
+guid: 4824b905d2813394d96c551410e09df9
+>>>>>>>> main:Assets/Materials/New Material.mat.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
