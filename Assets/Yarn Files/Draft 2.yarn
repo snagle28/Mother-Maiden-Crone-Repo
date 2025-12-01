@@ -1,0 +1,442 @@
+title: intro
+---
+<<declare $hysteria = 0>>
+<<declare $mothersFriend = false>>
+<<declare $EMPresent = false>>
+<<declare $PrudencePresent = false>>
+<<declare $JohnPresent = false>>
+<<declare $DanielPresent = false>>
+<<declare $ConstablePresent = false>>
+<<declare $JosephPresent = false>>
+<<declare $EstherPresent = false>>
+<<declare $LauraPresent = false>>
+
+You had seen many a witch hang. The sight was gruesome, but no more than the burning red of pox or the stench of rotten flesh. No more than anything else you would see in the village.
+
+It was the sound that was most striking. The pull of a stool, the bounce of the rope. The snap of the neckbone. And then the gasping… the horrible, wheezing attempt at one final gulp of life.  
+
+The first time you heard it you were with your son. He had cried, then. Then the next time it happened he had not cried at all.
+
+No more do you linger in the depths of memory. You step into the Meeting House. The sound engulfs you. The trial begins. 
+
+As the doors close behind you, a gust of summer air blows into the space. Your hair is plastered to your forehead and neck.
+
+The whispers, cries, and prayers of the attending townspeople are nearly as suffocating as their body odor.
+-> It's simple and austere. It serves its purpose well.
+	<<set $hysteria to 1>>
+-> It's stuffy aFnd distracting. Not an ounce of room to breathe.
+	<<set $hysteria to 1>>
+-> It's heavy and intense. You've witnessed girls meet their final fate here.
+	<<set $hysteria to 1>>
+
+Narrow wooden benches, occupied by village men, are shoved up against the rough-hewn walls. Candlelight casts an orange shimmer across the dark canopy overhead. But that matters not to you.
+
+There's one person, and only one person, on your mind.
+
+Your daughter, Prudence. The Maiden.
+
+You look frantically around for her...but she is nowhere in sight.
+<<jump observing>>
+===
+
+title: observing
+---
+<<declare $allObserved to false>>
+As more figures shuffle into The Meeting House, your eyes begin to wander…
+<<set $allObserved to true>>
+
+<<if $allObserved is true>>
+	<<jump entrances>>
+<<endif>>
+===
+
+title: entrances
+---
+The Constable: Behold: the accused!
+	<<set $EMPresent to true>>
+
+You knew her very well. It’s your neighbor, Esther Adams.
+
+Weathered by age, her back curves slightly, her fingers bent towards her palms. Her face is marked by years of service to her town.
+
+Esther had been the town's midwife for many years. Esther...
+-> Had helped raise your children.
+	<<set $nurturedSon to true>>
+	<<jump raisingSon>>
+-> Had helped raise you.
+	<<set $nurturedSon to false>>
+	<<jump raisingMother>>
+	
+===
+
+title: raisingMother
+---
+She was 71. It was remarkable that she could stand. You had seen her around the village at times; for many years she had been a midwife to your neighbors and friends. 
+
+She looks over at you, at that moment. She does not smile or frown, only gazes at you softly. 
+
+You recall that Esther had lived next door to your mother. They had prayed together, raised their children together. You had almost married her son, before he passed. 
+
+In another life, you would be family. 
+<<jump maidenArrival1>>
+===
+
+title: raisingSon
+---
+She was 71. It was remarkable that she could stand. You had seen her around the village at times; for many years she had been a midwife to your neighbors and friends.
+
+Many years ago she birthed your firstborn son. Years later, she wiped his brow and prayed for him when he fell ill.
+
+This woman… a witch? It couldn’t be. The other reality was far more terrifying; if Esther was not tried and found guilty, Prudence would hang in her stead. A false accusation was as good a sin as putting a blade to one’s own throat. 
+<<jump maidenArrival1>>
+===
+
+title: maidenArrival1
+---
+
+Finally the crowd parts enough for you to spot Prudence. She stands at the front of the crowd, your husband clasping her shoulder protectively. She looks so small. 
+	<<set $EMPresent = false>>
+	<<set $PrudencePresent = true>>	
+
+Prudence catches your gaze, her eyes wide with worry. You see your mother’s nose and your father’s brows. She steps towards you, her arm outstretched, before her father pulls her back.
+-> Prudence was the picture of faith: soft, innocent, and obedient.
+	<<set $smartMaiden to false>>
+	<<jump docileMaiden>>
+-> Prudence and her father often fought; her intelligence threatened him.
+	<<set $smartMaiden to true>>
+	<<jump rebelMaiden>>
+===
+
+title: docileMaiden
+---
+She was so unlike you. It had never been easy to hold your tongue, but your daughter excelled at it. She was her father’s favorite. The picture of feminine grace. In the eyes of the village, surely, she could do no wrong.
+	<<jump maidenArrival>>
+===
+
+title: rebelMaiden
+---
+You admired the slight allowance for rebellion that youth offered her. Perhaps it was miniscule, negligible. The nature of being too small for men to see and too soft for boys to ignore had instilled within her a cautious distaste for authority. A need to prove something. 
+
+Soon Prudence is swallowed by the crowd and you must push your way back to the front.
+	<<jump maidenArrival>> 
+===
+
+title: maidenArrival
+---
+<<set $JohnPresent to true>>
+John: You, the good people of Salem, know of our purpose here today. 
+
+John: Ms. Prudence Herrick, daughter of Will Herrick, claims that Esther has caused her great and unjust injury. We bring forth the charges of Witchcraft and Sundry to determine the truth of her accusation. 
+	<<set $JohnPresent to false>>
+	<<set $DanielPresent to true>>
+Daniel: We will begin our examination by hearing from those who witnessed the act. Prudence Herrick, step forth. What do you say?
+
+You watch as Prudence, head lowered, takes the stand. 
+
+Prudence: She beat me this morning.
+	<<if $smartMaiden is true>>
+		<<jump ruthResponseTwo>>
+	<<else>>
+        	<<jump ruthResponseOne>>
+	<<endif>>
+===
+
+title: ruthResponseOne
+---
+<<if $nurturedSon is true>>
+How? Why would Esther, the woman who had delivered your son, beat Prudence?
+
+She knew Prudence. Had stitched her wounds and healed her when she was ill. It didn’t make sense.
+
+Why would your daughter lie? She was, you thought, the picture of innocence. Unless something had happened, or Esther had seen something… 
+-> What would Esther have seen, or said, for Prudence to accuse her?
+-> You could not doubt your daughter now. Look away and keep your gaze down. 
+-> You look upon Prudence with worry. You had seen this story unfold before. If some accident had happened and Prudence broken a law— or a code of honor— and Esther had witnessed it?  
+
+Maybe Prudence had no other choice but to ‘become afflicted.’
+
+If you demonstrated even a whiff of distrust towards Prudence, she would immediately become suspect. Prudence may have a good reputation, but so did Esther. 
+
+<<elseif $nurturedSon is false>>
+Why would Esther hurt Prudence? For many years, Esther had treated you like a daughter. Her son’s intended. She had given no indication of the Sin she stood accused of.
+
+Then again. Prudence had not demonstrated the level of calculated cruelty necessary for lying about this. She was, after all, timid. 
+
+You could not doubt her.
+<<endif>>
+<<jump magiSpeaks>>
+===
+
+
+title: ruthResponseTwo
+---
+<<if $nurturedSon is true>>
+How? Why would Esther, the woman who had delivered your son, beat Prudence?
+
+She knew Prudence. Had stitched her wounds and healed her when she was ill. It didn’t make sense.
+
+Then again, Prudence was no fool. Though at times she got herself into trouble she always snuck her way out. And, above all, she was never cruel.
+
+Something had happened...
+-> Maybe Esther had seen something she shouldn't have.
+-> You could not doubt your daughter now. Look away and keep your gaze down. 
+
+You look upon Prudence with worry. You had seen this story unfold before. If some accident had happened and Prudence broken a law— or a code of honor— and Esther had witnessed it?  
+
+Maybe Prudence had no other choice but to ‘become afflicted.’
+
+If you demonstrated even a whiff of distrust towards Prudence, she would immediately become suspect. Prudence may have a good reputation, but so did Esther. 
+
+<<elseif $nurturedSon is false>>
+Why would Esther hurt Prudence? For many years, Esther had treated you like a daughter. Her son’s intended. She had given no indication of the Sin she stood accused of.
+
+Still, you did not know Esther well. Only your mother had.
+
+And Prudence was no fool. Though at times she got herself into trouble she always snuck her way out. And, above all, she was never cruel.
+
+Something had happened.
+<<endif>>
+<<jump magiSpeaks>>
+===
+
+title: magiSpeaks
+---
+The sound of Daniel’s voice brings you back to the trial.
+
+Daniel: The woman? Or her spectre?
+
+
+Prudence: Forgive me, s-sir, but I cannot say. I thought it was her spectre, but I was overtaken with a fear unlike any I have ever known, and I fell… I fell into a fit.
+
+Daniel: What happened then? 
+
+Prudence: When I awoke there were bruises upon my skin and I knew that she had attacked me.
+
+Your daughter, wounded. You cannot stay silent, not now. Even if you wanted to, you would feel the heat of the community’s gaze. A mother’s only job was to care for her children.
+-> You: Show me, child. 
+-> You: Let them see what she did to you.
+
+The magistrates turn towards you. You feel the intensity of everyone’s gaze, and hear whispers around you.
+-> Hold  their gaze.
+-> You: Forgive me.
+
+Daniel: You should be careful to hold your tongue, woman. 
+
+Very well. Men, look away.
+ 
+You step forward, and Prudence holds out her arm. Her skin is soft, milky.
+
+Unharmed. You shield her with your body; you’re sure no one else has seen.Then you pull her sleeve down slowly. You can see the tears in Prudence’s eyes. Feel the pound of her heartbeat in her wrist. She’s terrified. 
+-> The witch has cast a bleeding spell. Her wounds are deep.
+-> Her bruises mark the shape of a hand. She has been grasped by the witch.
+
+Daniel: This is grave news, indeed.
+
+Prudence looks to the magistrates for approval. They nod, and she slowly pulls her sleeve up to reveal a dark, purple bruise on her wrist. 
+
+Gasps are heard around the hall. Prudence covers her skin again quickly, her face red and her eyes teary.
+
+Daniel: A grave marking, indeed. I pray that you heal quickly.
+	<<set $DanielPresent to false>>
+	<<set $JohnPresent to true>>
+
+John: Did you speak to her that day? Was she cruel in nature?
+
+Prudence: She did not speak to me. But she looked at me with the Devil’s intent. She whispered something as I was falling; I believe it was a spell. 
+	<<set $DanielPresent to true>>
+	<<set $JohnPresent to false>>
+
+Daniel: Constable, did you search Esther? Was she found with any belongings?
+	<<set $ConstablePresent to true>>
+
+Constable: I did, sir. She had with her two items of witchcraft! 
+	<<set $doll to true>>
+	<<set $vial to true>>
+	<<set $PrudencePresent to false>>
+
+
+
+Constable: We searched the witch’s home one hour ago. This was not the only evidence of her witchcraft.
+ 
+Constable: In her kitchen cupboard she had next to a spool of decadent thread a bundle of herbs; one can only presume her midwifery was but an excuse to enchant our women with potions!
+
+Daniel: And what of the other item, Constable? 
+
+Constable: There was one more piece of physical evidence. A letter to her cousin Gurney in Boston.
+ 
+Daniel: Read us the letter.
+ 
+The constable reads the letter out loud, his words shaky and cautious.
+
+Constable: "…and I yearn for the company of a child once more." Signed, Esther Goode.
+
+Daniel: Why did you bring this to us, Constable?
+
+Constable: Is there anyone among us who knew that Esther intended to leave? No. Only a guilty woman would flee her home of twenty years without informing her neighbor.
+	<<set $ConstablePresent to false>>
+	<<set $DanielPresent to false>>
+	<<set $JohnPresent to true>>
+
+John: Joseph, you are the son of Esther and Warren Goode, may he rest in peace. Did you know that your mother intended to leave?
+	<<set $JosephPresent to true>>
+
+Joseph: No.
+
+ 
+Laura: I knew. After all, when she leaves, I am expected to take over her duties. I was unaware that it was a secret, nor that she was… a witch.
+	<<set $JosephPresent to false>>
+	<<set $LauraPresent to true>>
+
+You recognize the voice: Laura Adams. Your neighbor, and Esther’s apprentice. She had been learning the ways of midwifery and had already birthed two boys from a neighboring village.
+ 
+Constable: Only a guilty woman flees!
+	<<set $LauraPresent to false>>
+	<<set $ConstablePresent to true>>
+
+John: Steel yourselves, men. We will hear from the witch herself. Prudence goes to her parents.
+
+John: Mrs. Esther. What do you have to say about this accusation?
+	<<set $EstherPresent to true>>
+
+Esther: The Lord knows I am innocent.
+
+John: Then you would accuse Prudence of lying. To lie in this hall— he stands— is a grave sin. Prudence. Are you sure that Esther cast a spell?
+	<<set $EstherPresent to false>>
+	<<set $PrudencePresent to true>>
+
+Prudence: Yes.
+
+Joseph: Forgive me, but I will speak. My mother has never been known to stray from the path of righteousness. 
+	<<set $PrudencePresent to false>>
+	<<set $JosephPresent to true>>
+
+Joseph: She guided me with a steady hand and led our household with dignity. All that I have seen of her leads me to believe that she is a woman of God.
+
+Joseph: But she must prove it. A trial is the only way to lift you of this burden. If you are innocent then God will let that be known.
+-> She’s wavering! Condemn her!
+	<<jump condemn>>
+-> A trial is how we’ve always vanquished issues that plague the town. A trial is what we shall have.
+    <<jump fair>> 
+-> We must do what the Lord would want...and that is ensuring the trial is fair and just. Only then can we find the true witch, if there is one at all. 
+    <<jump pensive>>
+===
+
+title: condemn
+---
+The crowd speaks up, supporting your words.
+
+Stonemason: The Crone’s guilty!
+
+Cobbler: The witch shivers!
+
+Neighbor: Trial, trial!
+
+Fisherman: She’s absolutely right!
+	<<set $hysteria = $hysteria + 1>>
+	<<jump examEnd>>
+===
+
+title: fair
+---
+The crowd murmurs.
+
+Stonemason: She speaks the truth.
+
+Fisherman: Get on with it!
+	<<jump examEnd>>
+===
+
+title: pensive
+---
+Stonemason: What?
+
+Cobbler: Maybe Mother is the witch...
+	<<set $hysteria = $hysteria - 1>>
+	<<jump examEnd>>
+===
+
+title: examEnd
+---
+Daniel: Hush, all! 
+	<<set $JohnPresent to false>>
+	<<set $DanielPresent to true>>
+	<<set $RuthPresent to true>>
+
+You: I would speak to the people. 
+
+As you step forward, you spot Oliver, the baker, at the front of the crowd. He nods at your husband, his friend, tersely. Several feet away you spot Oliver’s cousin and Prudence’s best friend, Lizzy. 
+
+
+Daniel: What say you, Ruth?
+
+You: Give me your hand, child. See how her hand trembles? She's shaking! This is, indeed, proof of witchcraft.
+
+You: You see, my daughter has always been gifted at embroidery. She is praised for her steady hands. She does not falter or shake.
+
+You: Esther would claim the mercy of God and lie with the Devil both. 
+
+Daniel: You would affirm your daughter’s accusations?
+-> You: I affirm with all my being that she is hearty and true.
+	<<jump push>>
+-> You: My daughter is scared and shaking...it’s only just to hear her accusation!
+	<<jump questioning>>
+===
+
+title: questioning
+---
+Daniel: But do you affirm her?
+	<<set $hysteria = $hysteria - 1>>
+
+The crowd reacts and whispers.
+
+Girl: What a fake.
+
+Boy: Sinful mother.
+
+Trapper: Have mercy on Prudence.
+	<<jump push>>
+===
+
+title: push
+---
+You: I would uphold my faith. Even now she keeps her gaze low. What mother would look away from the suffering of a child?
+	<<set $DanielPresent to false>>
+	<<set $JohnPresent to true>>
+
+John: SILENCE!
+
+John: And you, Ruth. You wished to speak. Then speak now. Your child suffers. Did you know of Esther’s true intent? Would you not seek to protect your child from such a force?
+-> You: I did not know that Esther was a witch, and I do not wish to sentence an innocent woman...which is why a trial must carry on nonetheless: to find the true witch!
+	<<set $hysteria = $hysteria - 1>>
+	<<jump losingGround>>
+-> You: Would that I could protect her from all the forces of evil in this world. But now she is afflicted, and I would seek justice.
+	<<jump fairGround>>
+-> You: Till death I will shield her. And now that I know the true intent of Esther… It is my belief that the only way to protect my daughter— and our covenant—  is to tie the noose.
+	<<set $hysteria = $hysteria + 1>>
+	<<jump gainingGround>>
+===
+
+title: losingGround
+---
+Boy: Hogwash! She surely knew!
+Girl: She’s a witch too!
+Neighbor: Burn, burn!
+===
+
+title: fairGround
+---
+Boy: Justice must be served!
+===
+
+title: gainingGround
+---
+The crowd roars in approval.
+===
+
+title: conclusion
+---
+John: Then so be it. Tis been decided: a court shall be held to find and cast the devil’s spawn once and for all. 
+
+John: You’re all dismissed. Meet back here at the cusp of sunset...so we shall deem the fate of The Crone.
+===
+
