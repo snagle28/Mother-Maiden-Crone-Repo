@@ -5,24 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbfa98c3-13a0-4325-8eba-69218154852b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mother-Maiden-Crone-Repo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mother-Maiden-Crone-Repo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Char1Test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Char1Test.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Char1Test2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Char1Test2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CharEsther.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CharEsther.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Desk.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Desk.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TrackVars.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TrackVars.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/charTest 1.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/charTest 1.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/charTest.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/charTest.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/charTest1.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/charTest1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Char1Test.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Char1Test.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Char1Test2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Char1Test2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/CharEsther.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/CharEsther.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/charTest 1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/charTest 1.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/charTest.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/charTest.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/charTest1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/charTest1.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Desk.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Desk.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/New Material.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/brick/concrete_floor_painted_nor_gl_4k.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/brick/concrete_floor_painted_nor_gl_4k.exr.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/dark_wooden_planks_4k/textures/dark_wooden_planks_nor_gl_4k.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/dark_wooden_planks_4k/textures/dark_wooden_planks_nor_gl_4k.exr.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/textures/plank_flooring_04_nor_gl_4k.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/textures/plank_flooring_04_nor_gl_4k.exr.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/weathered_planks_4k/textures/weathered_planks_nor_gl_4k.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/weathered_planks_4k/textures/weathered_planks_nor_gl_4k.exr.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/textures/Bench_norm.tga.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/textures/Bench_norm.tga.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +28,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@2a2241f53fcd/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/dev.yarnspinner.unity@bc7ddd3e5306/Runtime/Storage/InMemoryVariableStorage.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -128,6 +124,7 @@
       <workItem from="1764096498933" duration="2286000" />
       <workItem from="1764098824258" duration="3208000" />
       <workItem from="1764619292929" duration="13000" />
+      <workItem from="1764619324079" duration="528000" />
     </task>
     <servers />
   </component>
