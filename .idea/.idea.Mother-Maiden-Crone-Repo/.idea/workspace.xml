@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbfa98c3-13a0-4325-8eba-69218154852b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Char1Test.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Char1Test.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Char1Test2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Char1Test2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/CharEsther.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/CharEsther.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/charTest 1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/charTest 1.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/charTest.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/charTest.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/charTest1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/charTest1.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Desk.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Desk.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/New Material.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/brick/concrete_floor_painted_nor_gl_4k.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/brick/concrete_floor_painted_nor_gl_4k.exr.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/dark_wooden_planks_4k/textures/dark_wooden_planks_nor_gl_4k.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/dark_wooden_planks_4k/textures/dark_wooden_planks_nor_gl_4k.exr.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/textures/plank_flooring_04_nor_gl_4k.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/textures/plank_flooring_04_nor_gl_4k.exr.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/weathered_planks_4k/textures/weathered_planks_nor_gl_4k.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/weathered_planks_4k/textures/weathered_planks_nor_gl_4k.exr.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/textures/Bench_norm.tga.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/textures/Bench_norm.tga.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mother-Maiden-Crone-Repo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mother-Maiden-Crone-Repo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Character rising.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Character rising.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TrackVars.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TrackVars.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Yarn Files/Draft 2.yarn" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Yarn Files/Draft 2.yarn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +116,8 @@
       <workItem from="1764096498933" duration="2286000" />
       <workItem from="1764098824258" duration="3208000" />
       <workItem from="1764619292929" duration="13000" />
-      <workItem from="1764619324079" duration="528000" />
+      <workItem from="1764619324079" duration="3527000" />
+      <workItem from="1764623195466" duration="597000" />
     </task>
     <servers />
   </component>

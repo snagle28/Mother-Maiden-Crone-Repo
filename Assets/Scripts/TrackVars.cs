@@ -7,7 +7,9 @@ public class TrackVars : MonoBehaviour
     public InMemoryVariableStorage variableStorage;
 
     [Header("Character Presence Animation")]
-    [SerializeField] private GameObject emGameObject;
+    [SerializeField] private GameObject oliverGameObject;
+    [SerializeField] private GameObject lizzyGameObject;
+    [SerializeField] private GameObject fatherGameObject;
     [SerializeField] private GameObject prudenceGameObject;
     [SerializeField] private GameObject johnGameObject;
     [SerializeField] private GameObject danielGameObject;
@@ -26,7 +28,9 @@ public class TrackVars : MonoBehaviour
     
     
     // Track previous states of presence variables
-    bool prevEMPresent = false;
+    bool prevOliverPresent = false;
+    bool prevLizzyPresent = false;
+    bool prevFatherPresent = false;
     bool prevPrudencePresent = false;
     bool prevJohnPresent = false;
     bool prevDanielPresent = false;
@@ -49,6 +53,7 @@ public class TrackVars : MonoBehaviour
         if (variableStorage.TryGetValue("$hysteria", out float hysteriaFloat))
         {
             int currentHysteria = Mathf.RoundToInt(hysteriaFloat);
+            print(currentHysteria);
 
             if (currentHysteria != previousHysteria)
             {
@@ -119,7 +124,9 @@ public class TrackVars : MonoBehaviour
         /*
          * Tracking charcter appearence.
          */
-        CheckPV("$EMPresent", ref prevEMPresent, "EM", emGameObject);
+        CheckPV("$OliverPresent", ref prevOliverPresent, "Oliver", oliverGameObject);
+        CheckPV("$LizzyPresent", ref prevLizzyPresent, "Lizzy", lizzyGameObject);
+        CheckPV("$FatherPresent", ref prevFatherPresent, "Father", fatherGameObject);
         CheckPV("$PrudencePresent", ref prevPrudencePresent, "Prudence", prudenceGameObject);
         CheckPV("$JohnPresent", ref prevJohnPresent, "John", johnGameObject);
         CheckPV("$DanielPresent", ref prevDanielPresent, "Daniel", danielGameObject);
