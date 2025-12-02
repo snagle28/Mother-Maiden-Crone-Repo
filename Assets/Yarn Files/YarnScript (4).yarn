@@ -1,0 +1,23 @@
+title: myIntroTest
+---
+
+<< set $PrudenceFavor to 100>>
+
+<< set $RuthFavor to 100>>
+
+<< set $EstherFavor to 100>>
+
+
+You look frantically around for Prudence...but she is nowhere in sight.
+<<set $hysteria to 2>>
+
+
+This is a test to see if favor works.
+-> Decrease Prudence's favor by 10. 
+    <<set $PrudenceFavor to $PrudenceFavor- 10>>
+-> Decrease Esther's favor by 10.
+    <<set $EstherFavor to $EstherFavor - 10>>
+-> Decrease your favor by 10.
+    <<set $RuthFavor to $RuthFavor - 10>>
+
+===
