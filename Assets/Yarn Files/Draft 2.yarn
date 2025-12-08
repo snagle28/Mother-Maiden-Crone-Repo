@@ -489,6 +489,11 @@ John: You’re all dismissed. Meet back here at the cusp of sunset...so we shall
 
 title: Act2Intro
 ---
+<<set $title2 to true>>
+
+......
+<<set $title2 to false>>
+
 Had someone told you this morning that you would accuse Esther Goode of witchcraft, you might have slapped them.
 
 But then there you were, holding your little brother’s sticky hand and wiping the sweat from your brow. You had been waiting for your father to buy furs. Furs! In summer! 
@@ -1322,8 +1327,10 @@ tags: act3
 <<set $JohnPresent to true>>
 <<set $DanielPresent to true>>
 <<set $ConstablePresent to true>>
+<<set $title2 to true>>
 
 The time has come.
+<<set $title2 to false>>
 
 <<if $witness is "Lizzy">>
     <<set $LizzyPresent to true>>
