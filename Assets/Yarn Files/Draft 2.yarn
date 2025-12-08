@@ -21,10 +21,7 @@ title: intro
 <<declare $RuthPresent = true>>
 <<declare $doll = false>>
 <<declare $vial = false>>
-<<declare $ending = false>>
-<<declare $title1 = false>>
-<<declare $title2 = false>>
-<<declare $title3 = false>>
+
 
 
 You had seen many a witch hang. The sight was gruesome, but no more than the burning red of pox or the stench of rotten flesh. No more than anything else you would see in the village.
@@ -36,11 +33,6 @@ The first time you heard it you were with your son. He had cried, then. Then the
 No more do you linger in the depths of memory. You step into the Meeting House. The sound engulfs you. The trial begins. 
 
 As the doors close behind you, a gust of summer air blows into the space. Your hair is plastered to your forehead and neck.
-
-<<set $title1 to true>>
-
-Enter the trial.
-<<set $title1 to false>>
 
 The whispers, cries, and prayers of the attending townspeople are nearly as suffocating as their body odor.
 -> It's simple and austere. It serves its purpose well.
@@ -388,7 +380,7 @@ You: I would speak to the people.
 As you step forward, you spot Oliver, the baker, at the front of the crowd. He nods at your husband tersely. Several feet away you spot Oliver’s cousin and Prudence’s best friend, Lizzy. 
 
 Daniel: What say you, Ruth?
-<<set $PrudencePresent to true>>
+
 You: Let me look at my daughter.
 
 You turn to Prudence.
@@ -489,7 +481,6 @@ John: You’re all dismissed. Meet back here at the cusp of sunset...so we shall
 
 title: Act2Intro
 ---
-<<set $PrudencePresent to true>>
 Had someone told you this morning that you would accuse Esther Goode of witchcraft, you might have slapped them.
 
 But then there you were, holding your little brother’s sticky hand and wiping the sweat from your brow. You had been waiting for your father to buy furs. Furs! In summer! 
@@ -1336,8 +1327,7 @@ The time has come.
     <<set $OliverPresent to true>>
     <<jump Act3_Baker>>
 <<else>>
-    <<set $OliverPresent to true>>
-    <<jump Act3_Baker>>
+    No witness was chosen. Please ensure $witness is set to "Lizzy", "Laura", or "Oliver" before entering Act 3.
     <<stop>>
 <<endif>>
 ===
@@ -1775,7 +1765,7 @@ It is our job to close our eyes each night and trust that God will wake us up.
 
 
 You close your eyes.
-<<set $ending to true>>
+
 
 <<stop>>
 ===
