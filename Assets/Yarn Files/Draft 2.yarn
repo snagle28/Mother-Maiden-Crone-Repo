@@ -22,6 +22,9 @@ title: intro
 <<declare $doll = false>>
 <<declare $vial = false>>
 <<declare $ending = false>>
+<<declare $title1 = false>>
+<<declare $title2 = false>>
+<<declare $title3 = false>>
 
 
 You had seen many a witch hang. The sight was gruesome, but no more than the burning red of pox or the stench of rotten flesh. No more than anything else you would see in the village.
@@ -33,6 +36,11 @@ The first time you heard it you were with your son. He had cried, then. Then the
 No more do you linger in the depths of memory. You step into the Meeting House. The sound engulfs you. The trial begins. 
 
 As the doors close behind you, a gust of summer air blows into the space. Your hair is plastered to your forehead and neck.
+
+<<set $title1 to true>>
+
+Enter the trial.
+<<set $title1 to false>>
 
 The whispers, cries, and prayers of the attending townspeople are nearly as suffocating as their body odor.
 -> It's simple and austere. It serves its purpose well.

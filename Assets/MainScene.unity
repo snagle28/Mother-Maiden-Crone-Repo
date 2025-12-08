@@ -2200,6 +2200,9 @@ MonoBehaviour:
   josephGameObject: {fileID: 1702572050}
   estherGameObject: {fileID: 2063849505}
   lauraGameObject: {fileID: 679989367}
+  title1Object: {fileID: 1800731476}
+  title2Object: {fileID: 1381712927}
+  title3Object: {fileID: 1507043636}
   endingGameObject: {fileID: 1160346775}
 --- !u!1 &453627371
 GameObject:
@@ -6636,7 +6639,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1381712928
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6721,7 +6724,7 @@ Transform:
   m_GameObject: {fileID: 1381712927}
   serializedVersion: 2
   m_LocalRotation: {x: 0.015268921, y: 0.6842698, z: -0.72892815, w: 0.01433346}
-  m_LocalPosition: {x: 0.02, y: -0.874, z: -7.162}
+  m_LocalPosition: {x: 0.02, y: 0.067, z: -7.162}
   m_LocalScale: {x: 0.17, y: 0.095263675, z: 0.095263675}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6979,7 +6982,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1507043637
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7064,7 +7067,7 @@ Transform:
   m_GameObject: {fileID: 1507043636}
   serializedVersion: 2
   m_LocalRotation: {x: 0.015268921, y: 0.6842698, z: -0.72892815, w: 0.01433346}
-  m_LocalPosition: {x: 0.02, y: -1.929, z: -7.162}
+  m_LocalPosition: {x: 0.02, y: 0.067, z: -7.162}
   m_LocalScale: {x: 0.17, y: 0.095263675, z: 0.095263675}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -8865,7 +8868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: startNode
-      value: Act3_Titlecard
+      value: intro
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: yarnProject

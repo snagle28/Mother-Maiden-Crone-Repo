@@ -17,6 +17,9 @@ public class TrackVars : MonoBehaviour
     [SerializeField] private GameObject josephGameObject;
     [SerializeField] private GameObject estherGameObject;
     [SerializeField] private GameObject lauraGameObject;
+    [SerializeField] private GameObject title1Object;
+    [SerializeField] private GameObject title2Object;
+    [SerializeField] private GameObject title3Object;
 
     [SerializeField] private GameObject endingGameObject;
     
@@ -40,6 +43,10 @@ public class TrackVars : MonoBehaviour
     bool prevJosephPresent = false;
     bool prevEstherPresent = false;
     bool prevLauraPresent = false;
+
+    bool prevTitle1Present = false;
+    bool prevTitle2Present = false;
+    bool prevTitle3Present = false;
 
     bool prevEnding = false;
 
@@ -138,7 +145,11 @@ public class TrackVars : MonoBehaviour
         CheckPV("$JosephPresent", ref prevJosephPresent, "Joseph", josephGameObject);
         CheckPV("$EstherPresent", ref prevEstherPresent, "Esther", estherGameObject);
         CheckPV("$LauraPresent", ref prevLauraPresent, "Laura", lauraGameObject);
-        
+
+        TitleEffects("$title1",ref prevTitle1Present,title1Object);
+        TitleEffects("$title2",ref prevTitle2Present,title2Object);
+        TitleEffects("$title3",ref prevTitle3Present,title3Object);
+
         CheckEnding();
         
     }
@@ -163,6 +174,32 @@ public class TrackVars : MonoBehaviour
 
             }
         }
+    }
+
+    void TitleEffects(string variableName, ref bool previousStage, GameObject targetObject)
+    {
+        if (variableStorage.TryGetValue(variableName, out bool currentStage))
+        {
+
+            if (currentStage && !previousStage)
+            {
+                targetObject.SetActive(true);
+                previousStage = true;
+
+            }
+            else if (!currentStage && previousStage)
+            {
+                
+                targetObject.SetActive(false);
+                previousStage = false;
+                
+            }
+
+
+
+        }
+
+    
     }
     
     void PlayAnim(GameObject targetObject, string characterName)
