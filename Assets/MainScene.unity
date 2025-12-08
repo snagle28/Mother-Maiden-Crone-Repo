@@ -1822,6 +1822,10 @@ MonoBehaviour:
   josephGameObject: {fileID: 1702572050}
   estherGameObject: {fileID: 2063849505}
   lauraGameObject: {fileID: 679989367}
+  title1Object: {fileID: 1800731476}
+  title2Object: {fileID: 1381712927}
+  title3Object: {fileID: 1507043636}
+  endingGameObject: {fileID: 0}
 --- !u!1 &453627371
 GameObject:
   m_ObjectHideFlags: 0
@@ -5860,7 +5864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1381712928
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6203,7 +6207,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1507043637
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6933,7 +6937,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1800731477
 MeshCollider:
   m_ObjectHideFlags: 0
