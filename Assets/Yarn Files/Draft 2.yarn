@@ -1327,10 +1327,10 @@ tags: act3
 <<set $JohnPresent to true>>
 <<set $DanielPresent to true>>
 <<set $ConstablePresent to true>>
-<<set $title2 to true>>
+<<set $title3 to true>>
 
 The time has come.
-<<set $title2 to false>>
+<<set $title3 to false>>
 
 <<if $witness is "Lizzy">>
     <<set $LizzyPresent to true>>
