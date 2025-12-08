@@ -17,8 +17,6 @@ public class TrackVars : MonoBehaviour
     [SerializeField] private GameObject josephGameObject;
     [SerializeField] private GameObject estherGameObject;
     [SerializeField] private GameObject lauraGameObject;
-
-    [SerializeField] private GameObject endingGameObject;
     
     //[SerializeField] private string animationTriggerName = "CharacterEnter";
 
@@ -41,8 +39,6 @@ public class TrackVars : MonoBehaviour
     bool prevEstherPresent = false;
     bool prevLauraPresent = false;
 
-    bool prevEnding = false;
-
 
     void Start()
     {
@@ -57,11 +53,11 @@ public class TrackVars : MonoBehaviour
         if (variableStorage.TryGetValue("$hysteria", out float hysteriaFloat))
         {
             int currentHysteria = Mathf.RoundToInt(hysteriaFloat);
-            //print(currentHysteria);
+            print(currentHysteria);
 
             if (currentHysteria != previousHysteria)
             {
-                //Debug.Log("Hysteria changed: " + currentHysteria);
+                Debug.Log("Hysteria changed: " + currentHysteria);
                 previousHysteria = currentHysteria;
             }
         }
@@ -74,7 +70,7 @@ public class TrackVars : MonoBehaviour
         /*
          * PrudenceFavor
          */
-        if (variableStorage.TryGetValue("$prudenceFavor", out float PrudenceFavorFloat))
+        if (variableStorage.TryGetValue("$PrudenceFavor", out float PrudenceFavorFloat))
         {
             int currentPruFavor = Mathf.RoundToInt(PrudenceFavorFloat);
 
@@ -92,7 +88,7 @@ public class TrackVars : MonoBehaviour
         /*
          * Ruth
          */
-        if (variableStorage.TryGetValue("$ruthFavor", out float RuthFavorFloat))
+        if (variableStorage.TryGetValue("$RuthFavor", out float RuthFavorFloat))
         {
             int currentRuthFavor = Mathf.RoundToInt(RuthFavorFloat);
 
@@ -110,7 +106,7 @@ public class TrackVars : MonoBehaviour
         /*
          * EstherFavor
          */
-        if (variableStorage.TryGetValue("$estherFavor", out float EstherFavorFloat))
+        if (variableStorage.TryGetValue("$EstherFavor", out float EstherFavorFloat))
         {
             int currentEstherFavor = Mathf.RoundToInt(EstherFavorFloat);
 
@@ -138,8 +134,6 @@ public class TrackVars : MonoBehaviour
         CheckPV("$JosephPresent", ref prevJosephPresent, "Joseph", josephGameObject);
         CheckPV("$EstherPresent", ref prevEstherPresent, "Esther", estherGameObject);
         CheckPV("$LauraPresent", ref prevLauraPresent, "Laura", lauraGameObject);
-        
-        CheckEnding();
         
     }
     
@@ -204,46 +198,7 @@ public class TrackVars : MonoBehaviour
             Debug.LogWarning($"No target object for {characterName}");
         }
     }
-    
-    void PlayEnding(GameObject targetObject)
-    {
-        if (targetObject != null)
-        {
-            Animator animator = targetObject.GetComponent<Animator>();
-            if (animator != null)
-            {
-                animator.SetTrigger("EndingAnimation"); // Replace with your specific animation trigger name
-            }
-            else
-            {
-                Debug.LogWarning("No Animator component found for ending!");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("No target object for ending");
-        }
-    }
-    
-    void CheckEnding()
-    {
-        if (variableStorage.TryGetValue("$ending", out bool currentValue))
-        {
-            // Check if the value changed from false to true
-            if (currentValue && !prevEnding)
-            {
-                Debug.Log("Ending is true");
-                PlayEnding(endingGameObject);
-                prevEnding = true; // Update immediately to prevent repeated calls
-            }
-            // Check if the value changed from true to false (optional: remove if not needed)
-            else if (!currentValue && prevEnding)
-            {
-                Debug.Log("Ending is false");
-                // If you have a reverse animation, call it here
-                prevEnding = false;
-            }
-        }
-    }
+
+
     
 }
