@@ -39,7 +39,7 @@ As the doors close behind you, a gust of summer air blows into the space. Your h
 
 <<set $title1 to true>>
 
-Enter the trial.
+You enter.
 <<set $title1 to false>>
 
 The whispers, cries, and prayers of the attending townspeople are nearly as suffocating as their body odor.
