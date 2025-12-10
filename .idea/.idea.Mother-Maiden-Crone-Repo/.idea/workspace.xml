@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbfa98c3-13a0-4325-8eba-69218154852b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Character rising.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Character rising.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Material.001 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Material.001 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Flow/EndVideoTexture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Flow/EndVideoTexture.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mother-Maiden-Crone-Repo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mother-Maiden-Crone-Repo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scene/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scene/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/StartScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TrackVars.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TrackVars.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Yarn Files/Draft 2.yarn" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Yarn Files/Draft 2.yarn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +129,7 @@
       <workItem from="1765038608696" duration="3337000" />
       <workItem from="1765223962257" duration="3802000" />
       <workItem from="1765335347443" duration="412000" />
+      <workItem from="1765336075065" duration="1355000" />
     </task>
     <servers />
   </component>

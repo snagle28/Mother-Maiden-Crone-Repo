@@ -19,8 +19,9 @@ title: intro
 <<declare $nurturedSon = false>>
 <<declare $smartMaiden = false>>
 <<declare $RuthPresent = true>>
+<<declare $herbs = false>>
+<<declare $letter = false>>
 <<declare $doll = false>>
-<<declare $vial = false>>
 <<declare $title1 = false>>
 <<declare $title2 = false>>
 <<declare $title3 = false>>
@@ -272,17 +273,26 @@ Daniel: Constable, did you search Esther? Was she found with any belongings?
 
 Constable: I did, sir. She had with her two items of witchcraft! 
     <<set $hysteria to $hysteria + 5>>
+	<<set $herbs to true>>
+	<<set $letter to true>>
 	<<set $doll to true>>
-	<<set $vial to true>>
 	<<set $PrudencePresent to false>>
-
-Constable: We searched the witch’s home one hour ago. This was not the only evidence of her witchcraft.
  
 Constable: In her kitchen cupboard she had next to a spool of decadent thread a bundle of herbs; one can only presume her midwifery was but an excuse to enchant our women with potions!
 
-Daniel: And what of the other item, Constable? 
+Daniel: And what of the other items, Constable? 
 
-Constable: There was one more piece of physical evidence. A letter to her cousin Gurney in Boston.
+Constable: A small doll, likely used to cast spells and haunt her victims. 
+
+<<set $EstherPresent to true>>
+<<set $JosephPresent to true>>
+Esther: That doll... It belonged to my late daughter, Liza. It is only to remember her by. My girl...
+
+Joseph: My mother speaks the truth. It was my older sister's. She's held onto it for years.
+
+Daniel: Fine, fine. What of the other item, Constable? 
+
+Constable: A letter to her cousin Gurney in Boston.
  
 Daniel: Read us the letter.
  
@@ -301,9 +311,10 @@ John: Joseph, you are the son of Esther and Warren Goode, may he rest in peace. 
 	<<set $JosephPresent to true>>
 
 Joseph: No.
+<<set $JosephPresent to false>>
+<<set $EstherPresent to false>>
  
 Laura: I knew. After all, when she leaves, I am expected to take over her duties. I was unaware that it was a secret, nor that she was… a witch.
-	<<set $JosephPresent to false>>
 	<<set $LauraPresent to true>>
 
 You recognize the voice: Laura Adams. Your neighbor, and Esther’s apprentice. She had been learning the ways of midwifery and had already birthed two boys from a neighboring village.

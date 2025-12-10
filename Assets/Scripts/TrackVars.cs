@@ -187,6 +187,10 @@ public class TrackVars : MonoBehaviour
     CheckPV("$JosephPresent", ref prevJosephPresent, "Joseph", josephGameObject);
     CheckPV("$EstherPresent", ref prevEstherPresent, "Esther", estherGameObject);
     CheckPV("$LauraPresent", ref prevLauraPresent, "Laura", lauraGameObject);
+    
+    CheckReady("$letter");
+    CheckReady("$herbs");
+    CheckReady("$doll");
 
         TitleEffects("$title1",ref prevTitle1Present,title1Object);
         TitleEffects("$title2",ref prevTitle2Present,title2Object);
@@ -320,6 +324,7 @@ public class TrackVars : MonoBehaviour
         }
     }
     
+    
     void CheckEnding()
     {
         if (variableStorage.TryGetValue("$ending", out bool currentValue))
@@ -354,6 +359,33 @@ public class TrackVars : MonoBehaviour
                 float bobOffset = Mathf.Sin(Time.time * bobSpeed) * bobAmplitude;
                 obj.transform.position = originalPos + new Vector3(0f, bobOffset, 0f);  // Apply vertical bob
             }
+        }
+    }
+
+    public bool letterVisible = false;
+    public bool herbsVisible = false;
+    public bool dollVisible = false;
+    [Header("Evidence Objects. First letter, then herbs, then doll.")] 
+    [SerializeField] private GameObject[] evidenceObjects;  // Add any other evidence objects [e.g., letter, herbs, etc.]
+    
+    
+    void CheckReady(string evidenceName)
+    {
+        if (variableStorage.TryGetValue(evidenceName, out bool currentValue))
+        {
+            // Check if the value changed from false to true
+            if (currentValue && !letterVisible)
+            {
+                Debug.Log($"{evidenceName} is present");
+                if (evidenceName == "$letter" || evidenceName == "$herbs")
+                {
+                    letterVisible = true;
+                    evidenceObjects[0].SetActive(true);
+                    evidenceObjects[1].SetActive(true);
+                    evidenceObjects[2].SetActive(true);
+                }
+            }
+            
         }
     }
 
