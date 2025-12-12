@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class SpeakerEffects : MonoBehaviour
 {
@@ -10,11 +11,17 @@ public class SpeakerEffects : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip talkingLoop; // e.g. little blip/loop; can be null
 
+    public GameObject emissivGO;
+    
     public void StartTalking()
     {
+        print(this.gameObject.name + " is talking!");
         if (animator && !string.IsNullOrEmpty(talkingBoolName))
+        {
             animator.SetBool(talkingBoolName, true);
-    
+            emissivGO.SetActive(true);
+        }
+
         if (audioSource && talkingLoop)
         {
             if (audioSource.clip != talkingLoop)
@@ -26,20 +33,13 @@ public class SpeakerEffects : MonoBehaviour
     
     public void StopTalking()
     {
+        emissivGO.SetActive(false);
         if (animator && !string.IsNullOrEmpty(talkingBoolName))
             animator.SetBool(talkingBoolName, false);
     
         if (audioSource && audioSource.isPlaying)
             audioSource.Stop();
     }
-    // public void StartTalking()
-    // {
-    //     Debug.Log($"START talking: {gameObject.name}");
-    // }
-    //
-    // public void StopTalking()
-    // {
-    //     Debug.Log($"STOP talking: {gameObject.name}");
-    // }
+    
 
 }

@@ -26,7 +26,8 @@ title: intro
 <<declare $title3 = false>>
 <<declare $gasp = false>>
 <<declare $whispers = false>>
-<<declare $RuthPresent = false>> 
+<<declare $RuthPresent = false>>
+<<declare $MC = "Ruth">> 
 
 
 You had seen many a witch hang. The sight was gruesome, but no more than the burning red of pox or the stench of rotten flesh. No more than anything else you would see in the village.
@@ -61,7 +62,6 @@ The whispers, cries, and prayers of the attending townspeople are nearly as suff
    <<set $hysteria to 1>>
 <<set $whispers to false>>
 
-
 Narrow wooden benches, occupied by village men, are shoved up against the rough-hewn walls. Candlelight casts an orange shimmer across the dark canopy overhead. But that matters not to you.
 
 
@@ -93,9 +93,10 @@ title: entrances
 ---
 Constable: Behold: the accused!
    <<set $EstherPresent to true>>
+   <<set $ConstablePresent to true>>
 
 
-You knew her very well. It’s your neighbor, Esther Adams.
+You knew her very well. It’s your neighbor, Esther Goode.
 
 
 Weathered by age, her back curves slightly, her fingers bent towards her palms. Her face is marked by years of service to her town.
@@ -146,8 +147,8 @@ title: maidenArrival1
 
 
 Finally the crowd parts enough for you to spot Prudence. She stands at the front of the crowd, your husband clasping her shoulder protectively. She looks so small.
-   <<set $EstherPresent = false>>
-   <<set $PrudencePresent = true>>   
+   <<set $EstherPresent to false>>
+   <<set $PrudencePresent to true>>   
 
 
 Prudence catches your gaze, her eyes wide with worry. You see your mother’s nose and your father’s brows. She steps towards you, her arm outstretched, before her father pulls her back. Prudence was...
@@ -172,8 +173,6 @@ title: rebelMaiden
 ---
 You admired the slight allowance for rebellion that youth offered her. Perhaps it was miniscule, negligible. The nature of being too small for men to see and too soft for boys to ignore had instilled within her a cautious distaste for authority. A need to prove something.
 
-
-Soon Prudence is swallowed by the crowd and you must push your way back to the front.
    <<jump maidenArrival>>
 ===
 
@@ -185,7 +184,6 @@ John: You, the good people of Salem, know of our purpose here today.
 
 
 John: Ms. Prudence Herrick, daughter of Will Herrick, claims that Esther has caused her great and unjust injury. We bring forth the charges of Witchcraft and Sundry to determine the truth of her accusation.
-   <<set $JohnPresent to false>>
    <<set $DanielPresent to true>>
 Daniel: We will begin our examination by hearing from those who witnessed the act. Prudence Herrick, step forth. What do you say?
 
@@ -328,20 +326,21 @@ Unharmed. You shield her with your body; you’re sure no one else has seen.Then
 
 
 Daniel: This is grave news, indeed. I pray that you heal quickly.
-   <<set $DanielPresent to false>>
-   <<set $JohnPresent to true>>
+<<set $DanielPresent to false>>
+<<set $JohnPresent to true>>
 
 
 John: Did you speak to her that day? Was she cruel in nature?
 
 
 Prudence: She did not speak to me. But she looked at me with the Devil’s intent. She whispered something as I was falling; I believe it was a spell.
-   <<set $DanielPresent to true>>
-   <<set $JohnPresent to false>>
+
+<<set $DanielPresent to true>>
+<<set $JohnPresent to false>>
 
 
 Daniel: Constable, did you search Esther? Was she found with any belongings?
-   <<set $ConstablePresent to true>>
+<<set $ConstablePresent to true>>
 
 
 Constable: I did, sir. She had with her two items of witchcraft!
@@ -400,33 +399,33 @@ John: Joseph, you are the son of Esther and Warren Goode, may he rest in peace. 
 Joseph: No.
 <<set $JosephPresent to false>>
 <<set $EstherPresent to false>>
+<<set $LauraPresent to true>>
 
 
 Laura: I knew. After all, when she leaves, I am expected to take over her duties. I was unaware that it was a secret, nor that she was… a witch.
-   <<set $LauraPresent to true>>
 
 
-You recognize the voice: Laura Adams. Your neighbor, and Esther’s apprentice. She had been learning the ways of midwifery and had already birthed two boys from a neighboring village.
+You recognize the voice. It's Laura Adams, your neighbor, and Esther’s apprentice. She had been learning the ways of midwifery and had already birthed two boys from a neighboring village.
 
+<<set $ConstablePresent to true>>
 
 Constable: Only a guilty woman flees!
-   <<set $LauraPresent to false>>
-   <<set $ConstablePresent to true>>
+<<set $LauraPresent to false>>
 
 
-John: Steel yourselves, men. We will hear from the witch herself. Prudence goes to her parents.
 
+John: Steel yourselves, men. We will hear from the witch herself. 
+<<set $EstherPresent to true>>
 
 John: Mrs. Esther. What do you have to say about this accusation?
-   <<set $EstherPresent to true>>
 
 
 Esther: The Lord knows I am innocent.
 
 
 John: Then you would accuse Prudence of lying. To lie in this hall— he stands— is a grave sin. Prudence. Are you sure that Esther cast a spell?
-   <<set $EstherPresent to false>>
-   <<set $PrudencePresent to true>>
+<<set $EstherPresent to false>>
+<<set $PrudencePresent to true>>
 
 
 Prudence: Yes.
@@ -470,7 +469,7 @@ Neighbor: Trial, trial!
 
 
 Fisherman: She’s absolutely right!
-   <<set $hysteria = $hysteria + 1>>
+   <<set $hysteria to $hysteria + 1>>
    <<jump examEnd>>
 ===
 
@@ -507,6 +506,9 @@ Daniel: Hush, all!
 
 You: I would speak to the people.
 
+<<set $OliverPresent to true>>
+<<set $LizzyPresent to true>>
+<<set $PrudencePresent to true>>
 
 As you step forward, you spot Oliver, the baker, at the front of the crowd. He nods at your husband tersely. Several feet away you spot Oliver’s cousin and Prudence’s best friend, Lizzy.
 
@@ -591,7 +593,7 @@ What can you say to that?
 -> You: "I did not know that Esther was a witch..."
    You: "...and I do not wish to sentence an innocent woman...which is why a trial must carry on nonetheless: to find the true witch!"
    <<set $ruthFavor to $ruthFavor + 10>>
-   <<set $hysteria = $hysteria - 1>>
+   <<set $hysteria to $hysteria - 1>>
    <<set $motherSide to "Esther">>
    <<jump losingGround>>
 -> You: "I would say that we must seek justice, whatever it means!"
@@ -599,7 +601,7 @@ What can you say to that?
    <<jump fairGround>>
 -> You: "I say that we tie the noose. Esther must hang."
    <<set $motherSide to "Prudence">>
-   <<set $hysteria = $hysteria + 1>>
+   <<set $hysteria to $hysteria + 1>>
    <<jump gainingGround>>
 ===
 
@@ -629,6 +631,8 @@ The crowd roars in approval.
 
 title: conclusion
 ---
+<<set $JohnPresent to true>>
+
 John: Then so be it. Tis been decided: a court shall be held to find and cast the devil’s spawn once and for all.
 
 
@@ -645,6 +649,8 @@ title: Act2Intro
 ......
 <<set $title2 to false>>
 
+<<set $PrudencePresent to true>>
+<<set $MC to "Prudence">> 
 
 Had someone told you this morning that you would accuse Esther Goode of witchcraft, you might have slapped them.
 
@@ -652,7 +658,7 @@ Had someone told you this morning that you would accuse Esther Goode of witchcra
 But then there you were, holding your little brother’s sticky hand and wiping the sweat from your brow. You had been waiting for your father to buy furs. Furs! In summer!
 
 
-You had been thinking about how silly it was to buy furs in June when the sound of hooves clopping pierced your senses. It happened so fast: The Quaker woman rode by. A Quaker girl on a horse, all on her own! It was obscene.
+You had been thinking about how silly it was to buy furs in June when the sound of hooves clopping pierced your senses. It happened so fast. The Quaker woman rode by. A Quaker girl on a horse, all on her own! It was obscene.
 
 
 It also made you blush.
@@ -867,6 +873,7 @@ title: Lizzy
 <<set $JohnPresent to false>>
 <<set $DanielPresent to true>>
 <<set $LizzyPresent to true>>
+
 Daniel: Hm. Perhaps it is not you, but your mother, that deserves suspicion. You speak the truth. Little Lizzy?
 
 
@@ -940,6 +947,7 @@ title: father
 <<set $LizzyPresent to false>>
 <<set $LauraPresent to false>>
 <<set $FatherPresent to true>>
+
 John: We have added the witness to our list. But first: we speak with the man that brought Prudence to us today. Mr. Herrick, step forward.
 
 
@@ -1021,7 +1029,7 @@ You panic... should you mouth something to him? You...
    Father: It must be! She was using it to target victims. By harming the doll, she might harm then.
    You: She brought it with her and used it to cast her spell on me.
    Father: My daughter speaks truly.
-   John: I see. We will ask Esther about this later. You may return to your daughter, Mr. Herrick.
+   John: I see. We will ask Esther about this later. You may return to your daughter, Mr. Herrick. 
    <<jump morewitness>>
 ->You: "Speak about the herbs!"
    Your father clears his throat, his brows furrowed.
@@ -1032,7 +1040,7 @@ You panic... should you mouth something to him? You...
    Father: I, ah... I do not know.
    <<set $prudenceFavor to $prudenceFavor + 20>>
    John: Nevermind, sir. Just return to your daughter.
-   <<jump morewitness>>
+    <<jump morewitness>>
 ->You: "Discuss the letter!"
    Your father clears his throat, his brows furrowed.
    Father: The letter speaks to the intent of Esther. Clearly, as the Constable said, she was attempting to flee her fate.
@@ -1372,7 +1380,7 @@ You recall what henbane does. You say...
    Daniel: Esther Goode, you stand accused of casting spells, harming Prudence Herrick, brewing potions, and bewitchment. What do you have to say for yourself?
    <<endif>>
 
-
+<<set $EstherPrestnt to true>>
 Esther: That God knows I am innocent.
 
 
@@ -1381,7 +1389,9 @@ John: We shall see.
 
 
 <<elseif $witness is "Lizzy">>
+
 <<set $LizzyPresent to true>>
+
 John: Lizzy. Come forth.
 
 
@@ -1606,6 +1616,7 @@ Oliver: I saw it this morning, after she attacked Prudence. She left the trading
 
 
 Daniel: Then we have a new piece of evidence. Esther Goode!
+
 <<set $EstherPrestnt to true>>
 
 
@@ -1684,6 +1695,7 @@ Oliver: I saw it this morning, after she attacked Prudence. She left the trading
 
 
 Daniel: Then we have a new piece of evidence. Esther Goode!
+
 <<set $EstherPrestnt to true>>
 
 
@@ -1824,6 +1836,7 @@ tags: act3
 <<set $ConstablePresent to true>>
 <<set $title3 to true>>
 
+<<set $MC to "Esther">> 
 
 The time has come.
 <<set $title3 to false>>
@@ -2424,6 +2437,8 @@ tags: act3 end
 ---
 Somewhere in the room, a person calls out to you. You think that it is not your son.
 Prudence wails. 
+<<set $PrudencePresent to false>>
+
 Why is she wailing? 
 It does not matter.
 
