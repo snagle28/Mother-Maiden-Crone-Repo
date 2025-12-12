@@ -5,43 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbfa98c3-13a0-4325-8eba-69218154852b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mother-Maiden-Crone-Repo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mother-Maiden-Crone-Repo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Constable Object.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Constable Object.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Constable.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Constable.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Daniel Object.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Daniel Object.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Daniel.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Daniel.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/EM.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/EM.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Esther.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Esther.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Father Object 1.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Father Object 1.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/John.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/John.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Joseph.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Joseph.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Laura Object.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Laura Object.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Laura.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Laura.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Oliver Object.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Oliver Object.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Prudence.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Prudence.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Ruth Object.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Ruth Object.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/UI Move.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/UI Move.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Joseph.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Joseph.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Lizzy.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Lizzy.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scene/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SEPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SEPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpeakerEffects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpeakerEffects.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Yarn Files/Draft 2.yarn" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Yarn Files/Draft 2.yarn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,6 +135,7 @@
       <workItem from="1765336075065" duration="1355000" />
       <workItem from="1765512127389" duration="540000" />
       <workItem from="1765512712964" duration="9985000" />
+      <workItem from="1765563354731" duration="3000" />
     </task>
     <servers />
   </component>
