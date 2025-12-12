@@ -27,7 +27,7 @@ title: intro
 <<declare $gasp = false>>
 <<declare $whispers = false>>
 <<declare $RuthPresent = false>> 
-<<set $RuthPresent to true>>
+
 
 You had seen many a witch hang. The sight was gruesome, but no more than the burning red of pox or the stench of rotten flesh. No more than anything else you would see in the village.
 
@@ -49,7 +49,7 @@ As the doors close behind you, a gust of summer air blows into the space. Your h
 
 You enter.
 <<set $title1 to false>>
-
+<<set $RuthPresent to true>>
 
 The whispers, cries, and prayers of the attending townspeople are nearly as suffocating as their body odor.
 <<set $whispers to true>>
@@ -91,7 +91,7 @@ As more figures shuffle into The Meeting House, your eyes begin to wander…
 
 title: entrances
 ---
-The Constable: Behold: the accused!
+Constable: Behold: the accused!
    <<set $EstherPresent to true>>
 
 

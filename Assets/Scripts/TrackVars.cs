@@ -6,6 +6,8 @@ using System.Collections.Generic;
 
 public class TrackVars : MonoBehaviour
 {
+    [Header("Yarn References")]
+    [SerializeField] private DialogueRunner dialogueRunner;
     public InMemoryVariableStorage variableStorage;
 
     [Header("Character Presence Animation")]
@@ -25,16 +27,15 @@ public class TrackVars : MonoBehaviour
     [SerializeField] private GameObject ruthGameObject;
 
     [SerializeField] private GameObject endingGameObject;
-    
-    //[SerializeField] private string animationTriggerName = "CharacterEnter";
 
     
+
     int previousHysteria = int.MinValue;
     int prevPrudenceFavor = int.MinValue;
     int prevEstherFavor = int.MinValue;
     int prevRuthFavor = int.MinValue;
-    
-    
+
+
     // Track previous states of presence variables
     bool prevOliverPresent = false;
     bool prevLizzyPresent = false;
@@ -54,7 +55,7 @@ public class TrackVars : MonoBehaviour
 
     bool prevEnding = false;
 
-// Add these for bobbing control
+    // Add these for bobbing control
     [Header("Bobbing Settings")]
     [SerializeField] private float bobAmplitude = 0.2f;  // Height of bob (e.g., 0.2 units)
     [SerializeField] private float bobSpeed = 2f;       // Speed of bob cycle
@@ -66,8 +67,20 @@ public class TrackVars : MonoBehaviour
     private Vector2 startPos;
     void Start()
     {
-        variableStorage = FindObjectOfType<InMemoryVariableStorage>();
-        
+        if (dialogueRunner == null)
+            dialogueRunner = FindObjectOfType<DialogueRunner>();
+
+        // Prefer the DialogueRunner's storage (so we're reading the same one Yarn writes to)
+        if (dialogueRunner != null)
+            variableStorage = dialogueRunner.VariableStorage as InMemoryVariableStorage;
+
+        // Fallback to old behavior if needed
+        if (variableStorage == null)
+            variableStorage = FindObjectOfType<InMemoryVariableStorage>();
+
+        if (variableStorage == null)
+            Debug.LogError("TrackVars: No InMemoryVariableStorage found. Presence checks will not work.");
+
         // Initialize bobbing for any characters already present
         InitializeBobbingIfPresent("$OliverPresent", ref prevOliverPresent, oliverGameObject);
         InitializeBobbingIfPresent("$LizzyPresent", ref prevLizzyPresent, lizzyGameObject);
@@ -98,7 +111,7 @@ public class TrackVars : MonoBehaviour
 
 
     public Image image;
-    
+
     void Update()
     {
         /*
@@ -112,133 +125,132 @@ public class TrackVars : MonoBehaviour
             if (currentHysteria != previousHysteria)
             {
                 //Debug.Log("Hysteria changed: " + currentHysteria);
-            previousHysteria = currentHysteria;
-            image.fillAmount = (currentHysteria / 100f);  // Fixed capitalization; use 100f for float division
+                previousHysteria = currentHysteria;
+                image.fillAmount = (currentHysteria / 100f);  // Fixed capitalization; use 100f for float division
             }
         }
-    else
-    {
-        
-        // Debug.Log("No $hysteria var in storage yet");
-    }
-    
-    
-    /*
-     * PrudenceFavor
-     */
-    if (variableStorage.TryGetValue("$prudenceFavor", out float PrudenceFavorFloat))
-    {
-        int currentPruFavor = Mathf.RoundToInt(PrudenceFavorFloat);
-
-        if (currentPruFavor != prevPrudenceFavor)
+        else
         {
-            Debug.Log("Prudence favor changed: " + currentPruFavor);
-            prevPrudenceFavor = currentPruFavor;
-        }
-    }
-    else
-    {
-        // Debug.Log("No $PrudenceFavor variable in storage yet.");
-    }
-    
-    /*
-     * Ruth
-     */
-    if (variableStorage.TryGetValue("$ruthFavor", out float RuthFavorFloat))
-    {
-        int currentRuthFavor = Mathf.RoundToInt(RuthFavorFloat);
 
-        if (currentRuthFavor != prevRuthFavor)
+            // Debug.Log("No $hysteria var in storage yet");
+        }
+
+
+        /*
+         * PrudenceFavor
+         */
+        if (variableStorage.TryGetValue("$prudenceFavor", out float PrudenceFavorFloat))
         {
-            Debug.Log("Ruth favor changed: " + currentRuthFavor);
-            prevRuthFavor = currentRuthFavor;
-        }
-    }
-    else
-    {
-        // Debug.Log("No $PrudenceFavor variable in storage yet.");
-    }
-    
-    /*
-     * EstherFavor
-     */
-    if (variableStorage.TryGetValue("$estherFavor", out float EstherFavorFloat))
-    {
-        int currentEstherFavor = Mathf.RoundToInt(EstherFavorFloat);
+            int currentPruFavor = Mathf.RoundToInt(PrudenceFavorFloat);
 
-        if (currentEstherFavor != prevEstherFavor)  // Fixed: Was incorrectly using prevRuthFavor
+            if (currentPruFavor != prevPrudenceFavor)
+            {
+                Debug.Log("Prudence favor changed: " + currentPruFavor);
+                prevPrudenceFavor = currentPruFavor;
+            }
+        }
+        else
         {
-            Debug.Log("Esther favor changed: " + currentEstherFavor);
-            prevEstherFavor = currentEstherFavor;  // Fixed: Update the correct variable
+            // Debug.Log("No $PrudenceFavor variable in storage yet.");
         }
-    }
-    else
-    {
-        // Debug.Log("No $PrudenceFavor variable in storage yet.");
-    }
-    
-    /*
-     * Tracking charcter appearence.
-     */
-    CheckPV("$OliverPresent", ref prevOliverPresent, "Oliver", oliverGameObject);
-    CheckPV("$LizzyPresent", ref prevLizzyPresent, "Lizzy", lizzyGameObject);
-    CheckPV("$FatherPresent", ref prevFatherPresent, "Father", fatherGameObject);
-    CheckPV("$PrudencePresent", ref prevPrudencePresent, "Prudence", prudenceGameObject);
-    CheckPV("$JohnPresent", ref prevJohnPresent, "John", johnGameObject);
-    CheckPV("$DanielPresent", ref prevDanielPresent, "Daniel", danielGameObject);
-    CheckPV("$ConstablePresent", ref prevConstablePresent, "Constable", constableGameObject);
-    CheckPV("$JosephPresent", ref prevJosephPresent, "Joseph", josephGameObject);
-    CheckPV("$EstherPresent", ref prevEstherPresent, "Esther", estherGameObject);
-    CheckPV("$LauraPresent", ref prevLauraPresent, "Laura", lauraGameObject);
-    CheckPV("$RuthPresent", ref prevRuthPresent, "Ruth", ruthGameObject);
 
-    CheckReady("$letter");
-    CheckReady("$herbs");
-    CheckReady("$doll");
+        /*
+         * Ruth
+         */
+        if (variableStorage != null)
+        {
+            if (variableStorage.TryGetValue("$RuthPresent", out bool ruthPresent))
+            {
+                if (ruthPresent != prevRuthPresent)
+                    Debug.Log($"TrackVars sees $RuthPresent changed -> {ruthPresent}");
+            }
+            else
+            {
+                Debug.LogWarning("TrackVars: $RuthPresent not found in variableStorage (name/case or wrong storage).");
+            }
+        }
 
-        TitleEffects("$title1",ref prevTitle1Present,title1Object);
-        TitleEffects("$title2",ref prevTitle2Present,title2Object);
-        TitleEffects("$title3",ref prevTitle3Present,title3Object);
+        /*
+         * EstherFavor
+         */
+        if (variableStorage.TryGetValue("$estherFavor", out float EstherFavorFloat))
+        {
+            int currentEstherFavor = Mathf.RoundToInt(EstherFavorFloat);
+
+            if (currentEstherFavor != prevEstherFavor)  // Fixed: Was incorrectly using prevRuthFavor
+            {
+                Debug.Log("Esther favor changed: " + currentEstherFavor);
+                prevEstherFavor = currentEstherFavor;  // Fixed: Update the correct variable
+            }
+        }
+        else
+        {
+            // Debug.Log("No $PrudenceFavor variable in storage yet.");
+        }
+
+        /*
+         * Tracking charcter appearence.
+         */
+        CheckPV("$OliverPresent", ref prevOliverPresent, "Oliver", oliverGameObject);
+        CheckPV("$LizzyPresent", ref prevLizzyPresent, "Lizzy", lizzyGameObject);
+        CheckPV("$FatherPresent", ref prevFatherPresent, "Father", fatherGameObject);
+        CheckPV("$PrudencePresent", ref prevPrudencePresent, "Prudence", prudenceGameObject);
+        CheckPV("$JohnPresent", ref prevJohnPresent, "John", johnGameObject);
+        CheckPV("$DanielPresent", ref prevDanielPresent, "Daniel", danielGameObject);
+        CheckPV("$ConstablePresent", ref prevConstablePresent, "Constable", constableGameObject);
+        CheckPV("$JosephPresent", ref prevJosephPresent, "Joseph", josephGameObject);
+        CheckPV("$EstherPresent", ref prevEstherPresent, "Esther", estherGameObject);
+        CheckPV("$LauraPresent", ref prevLauraPresent, "Laura", lauraGameObject);
+        CheckPV("$RuthPresent", ref prevRuthPresent, "Ruth", ruthGameObject);
+
+        CheckReady("$letter");
+        CheckReady("$herbs");
+        CheckReady("$doll");
+
+        TitleEffects("$title1", ref prevTitle1Present, title1Object);
+        TitleEffects("$title2", ref prevTitle2Present, title2Object);
+        TitleEffects("$title3", ref prevTitle3Present, title3Object);
 
         CheckEnding();
-        
+
     }
-    
+
     void CheckPV(string variableName, ref bool previousValue, string characterName, GameObject targetObject)
     {
+        if (variableStorage == null)
+            return;
+
         if (variableStorage.TryGetValue(variableName, out bool currentValue))
         {
-            // Check if the value changed from false to true
             if (currentValue && !previousValue)
             {
                 Debug.Log($"{characterName} is present");
-                PlayAnim(targetObject, characterName);  // Keep your existing entry logic if needed (even if not using Animator, this could be a code-based entry)
-                previousValue = true; // Update immediately to prevent repeated calls
-            
-            // Start bobbing: Add to list and store original position
-            if (targetObject != null && !bobbingObjects.Contains(targetObject))
-            {
-                bobbingObjects.Add(targetObject);
-                originalPositions[targetObject] = targetObject.transform.position;  // Store base position
+
+                if (targetObject != null && !targetObject.activeSelf)
+                    targetObject.SetActive(true);
+
+                PlayAnim(targetObject, characterName);
+                previousValue = true;
+
+                if (targetObject != null && !bobbingObjects.Contains(targetObject))
+                {
+                    bobbingObjects.Add(targetObject);
+                    originalPositions[targetObject] = targetObject.transform.position;
+                }
             }
-        }
-        // Check if the value changed from true to false
-        else if (!currentValue && previousValue)
-        {
-            Debug.Log($"{characterName} is leaving");
-            
-            // Stop bobbing: Remove from list
-            if (targetObject != null && bobbingObjects.Contains(targetObject))
+            else if (!currentValue && previousValue)
             {
-                bobbingObjects.Remove(targetObject);
-                originalPositions.Remove(targetObject);  // Clean up
-                // Optional: Reset to original position if needed
-                // targetObject.transform.position = originalPositions[targetObject];
+                Debug.Log($"{characterName} is leaving");
+
+                if (targetObject != null && bobbingObjects.Contains(targetObject))
+                {
+                    bobbingObjects.Remove(targetObject);
+                    originalPositions.Remove(targetObject);
+                }
+
+                PlayReverse(targetObject, characterName);
+                previousValue = false;
             }
-            
-            PlayReverse(targetObject, characterName);  // Keep your existing exit logic if needed
-            previousValue = false;
-        }
         }
     }
 
@@ -255,19 +267,19 @@ public class TrackVars : MonoBehaviour
             }
             else if (!currentStage && previousStage)
             {
-                
+
                 targetObject.SetActive(false);
                 previousStage = false;
-                
+
             }
 
 
 
         }
 
-    
+
     }
-    
+
     void PlayAnim(GameObject targetObject, string characterName)
     {
         if (targetObject != null)
@@ -287,7 +299,7 @@ public class TrackVars : MonoBehaviour
             Debug.LogWarning($"No target object for {characterName}");
         }
     }
-    
+
     void PlayReverse(GameObject targetObject, string characterName)
     {
         if (targetObject != null)
@@ -307,7 +319,7 @@ public class TrackVars : MonoBehaviour
             Debug.LogWarning($"No target object for {characterName}");
         }
     }
-    
+
     void PlayEnding(GameObject targetObject)
     {
         if (targetObject != null)
@@ -327,8 +339,8 @@ public class TrackVars : MonoBehaviour
             Debug.LogWarning("No target object for ending");
         }
     }
-    
-    
+
+
     void CheckEnding()
     {
         if (variableStorage.TryGetValue("$ending", out bool currentValue))
@@ -351,8 +363,8 @@ public class TrackVars : MonoBehaviour
     }
 
     public float bobHeight = 0.1f;
-   
-    
+
+
     private void BobUpAndDown()
     {
         foreach (var obj in bobbingObjects)
@@ -369,10 +381,10 @@ public class TrackVars : MonoBehaviour
     public bool letterVisible = false;
     public bool herbsVisible = false;
     public bool dollVisible = false;
-    [Header("Evidence Objects. First letter, then herbs, then doll.")] 
+    [Header("Evidence Objects. First letter, then herbs, then doll.")]
     [SerializeField] private GameObject[] evidenceObjects;  // Add any other evidence objects [e.g., letter, herbs, etc.]
-    
-    
+
+
     void CheckReady(string evidenceName)
     {
         if (variableStorage.TryGetValue(evidenceName, out bool currentValue))
@@ -389,9 +401,9 @@ public class TrackVars : MonoBehaviour
                     evidenceObjects[2].SetActive(true);
                 }
             }
-            
+
         }
     }
 
-    
+
 }

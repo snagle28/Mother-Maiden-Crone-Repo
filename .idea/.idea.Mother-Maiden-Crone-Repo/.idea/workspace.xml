@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbfa98c3-13a0-4325-8eba-69218154852b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mother-Maiden-Crone-Repo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mother-Maiden-Crone-Repo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scene/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/MainScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TrackVars.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TrackVars.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Yarn Files/Draft 2.yarn" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Yarn Files/Draft 2.yarn" afterDir="false" />
@@ -134,7 +133,7 @@
       <workItem from="1765335347443" duration="412000" />
       <workItem from="1765336075065" duration="1355000" />
       <workItem from="1765512127389" duration="540000" />
-      <workItem from="1765512712964" duration="2297000" />
+      <workItem from="1765512712964" duration="2736000" />
     </task>
     <servers />
   </component>

@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 16964143}
   - component: {fileID: 16964144}
+  - component: {fileID: 16964145}
   m_Layer: 0
   m_Name: Daniel Object
   m_TagString: Untagged
@@ -175,6 +176,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &16964145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16964142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 871a01198379b804da51b484fb1d82fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  talkingBoolName: IsTalking
+  audioSource: {fileID: 0}
+  talkingLoop: {fileID: 0}
 --- !u!1 &32916122
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,6 +877,7 @@ GameObject:
   - component: {fileID: 154425531}
   - component: {fileID: 154425530}
   - component: {fileID: 154425529}
+  - component: {fileID: 154425533}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -985,6 +1003,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -3.62, y: -0.086, z: 0}
+--- !u!82 &154425533
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154425528}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: be832733a27c0204b998645ce32beded, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &156986193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2579,6 +2694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73e1b5c465b54c147a3a0e1b771a11be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueRunner: {fileID: 0}
   variableStorage: {fileID: 447776929}
   oliverGameObject: {fileID: 1104574975}
   lizzyGameObject: {fileID: 679989367}
@@ -2621,6 +2737,22 @@ MonoBehaviour:
   speakers:
   - characterName: John
     effects: {fileID: 395355334}
+  - characterName: Esther
+    effects: {fileID: 2063849508}
+  - characterName: Prudence
+    effects: {fileID: 1195678590}
+  - characterName: Daniel
+    effects: {fileID: 16964145}
+  - characterName: Father
+    effects: {fileID: 1702572053}
+  - characterName: Constable
+    effects: {fileID: 764240311}
+  - characterName: Laura
+    effects: {fileID: 679989370}
+  - characterName: Oliver
+    effects: {fileID: 1104574978}
+  - characterName: Ruth
+    effects: {fileID: 548213360}
   lineText: {fileID: 480011104}
 --- !u!1 &453627371
 GameObject:
@@ -3293,6 +3425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 548213358}
   - component: {fileID: 548213359}
+  - component: {fileID: 548213360}
   m_Layer: 0
   m_Name: Ruth Object
   m_TagString: Untagged
@@ -3338,6 +3471,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &548213360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548213357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 871a01198379b804da51b484fb1d82fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  talkingBoolName: IsTalking
+  audioSource: {fileID: 0}
+  talkingLoop: {fileID: 0}
 --- !u!4 &550718763 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f4be085d0870a7c4abbf739d69aa79d2, type: 3}
@@ -4025,6 +4174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 679989368}
   - component: {fileID: 679989369}
+  - component: {fileID: 679989370}
   m_Layer: 0
   m_Name: Laura Object
   m_TagString: Untagged
@@ -4070,6 +4220,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &679989370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679989367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 871a01198379b804da51b484fb1d82fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  talkingBoolName: IsTalking
+  audioSource: {fileID: 0}
+  talkingLoop: {fileID: 0}
 --- !u!1001 &684191685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4580,6 +4746,7 @@ GameObject:
   m_Component:
   - component: {fileID: 764240309}
   - component: {fileID: 764240310}
+  - component: {fileID: 764240311}
   m_Layer: 0
   m_Name: Constable Object
   m_TagString: Untagged
@@ -4625,6 +4792,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &764240311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764240308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 871a01198379b804da51b484fb1d82fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  talkingBoolName: IsTalking
+  audioSource: {fileID: 154425533}
+  talkingLoop: {fileID: 8300000, guid: be832733a27c0204b998645ce32beded, type: 3}
 --- !u!1 &826766911
 GameObject:
   m_ObjectHideFlags: 0
@@ -6030,6 +6213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1104574976}
   - component: {fileID: 1104574977}
+  - component: {fileID: 1104574978}
   m_Layer: 0
   m_Name: Oliver Object
   m_TagString: Untagged
@@ -6075,6 +6259,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1104574978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104574975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 871a01198379b804da51b484fb1d82fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  talkingBoolName: IsTalking
+  audioSource: {fileID: 0}
+  talkingLoop: {fileID: 0}
 --- !u!1 &1114457306
 GameObject:
   m_ObjectHideFlags: 0
@@ -8766,6 +8966,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1702572051}
   - component: {fileID: 1702572052}
+  - component: {fileID: 1702572053}
   m_Layer: 0
   m_Name: Father Object
   m_TagString: Untagged
@@ -8811,6 +9012,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1702572053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702572050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 871a01198379b804da51b484fb1d82fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  talkingBoolName: IsTalking
+  audioSource: {fileID: 0}
+  talkingLoop: {fileID: 0}
 --- !u!1 &1716217565
 GameObject:
   m_ObjectHideFlags: 0
