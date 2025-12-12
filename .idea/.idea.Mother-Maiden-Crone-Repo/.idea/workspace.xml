@@ -23,7 +23,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SEPresenter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpeakerEffects.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@2a2241f53fcd/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/dev.yarnspinner.unity@bc7ddd3e5306/Runtime/DialogueRunner/DialogueRunner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/dev.yarnspinner.unity@bc7ddd3e5306/Runtime/Storage/InMemoryVariableStorage.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -130,6 +133,8 @@
       <workItem from="1765223962257" duration="3802000" />
       <workItem from="1765335347443" duration="412000" />
       <workItem from="1765336075065" duration="1355000" />
+      <workItem from="1765512127389" duration="540000" />
+      <workItem from="1765512712964" duration="2297000" />
     </task>
     <servers />
   </component>

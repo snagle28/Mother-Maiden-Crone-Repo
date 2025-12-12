@@ -18,7 +18,6 @@ title: intro
 <<declare $ruthFavor = 0>>
 <<declare $nurturedSon = false>>
 <<declare $smartMaiden = false>>
-<<declare $RuthPresent = true>>
 <<declare $herbs = false>>
 <<declare $letter = false>>
 <<declare $doll = false>>
@@ -27,11 +26,8 @@ title: intro
 <<declare $title3 = false>>
 <<declare $gasp = false>>
 <<declare $whispers = false>>
-
-
-
-
-
+<<declare $RuthPresent = false>> 
+<<set $RuthPresent to true>>
 
 You had seen many a witch hang. The sight was gruesome, but no more than the burning red of pox or the stench of rotten flesh. No more than anything else you would see in the village.
 

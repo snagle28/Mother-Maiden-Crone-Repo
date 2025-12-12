@@ -22,6 +22,7 @@ public class TrackVars : MonoBehaviour
     [SerializeField] private GameObject title1Object;
     [SerializeField] private GameObject title2Object;
     [SerializeField] private GameObject title3Object;
+    [SerializeField] private GameObject ruthGameObject;
 
     [SerializeField] private GameObject endingGameObject;
     
@@ -45,6 +46,7 @@ public class TrackVars : MonoBehaviour
     bool prevJosephPresent = false;
     bool prevEstherPresent = false;
     bool prevLauraPresent = false;
+    bool prevRuthPresent = false;
 
     bool prevTitle1Present = false;
     bool prevTitle2Present = false;
@@ -77,6 +79,7 @@ public class TrackVars : MonoBehaviour
         InitializeBobbingIfPresent("$JosephPresent", ref prevJosephPresent, josephGameObject);
         InitializeBobbingIfPresent("$EstherPresent", ref prevEstherPresent, estherGameObject);
         InitializeBobbingIfPresent("$LauraPresent", ref prevLauraPresent, lauraGameObject);
+        InitializeBobbingIfPresent("$RuthPresent", ref prevRuthPresent, ruthGameObject);
         // Add any others if needed
     }
 
@@ -187,7 +190,8 @@ public class TrackVars : MonoBehaviour
     CheckPV("$JosephPresent", ref prevJosephPresent, "Joseph", josephGameObject);
     CheckPV("$EstherPresent", ref prevEstherPresent, "Esther", estherGameObject);
     CheckPV("$LauraPresent", ref prevLauraPresent, "Laura", lauraGameObject);
-    
+    CheckPV("$RuthPresent", ref prevRuthPresent, "Ruth", ruthGameObject);
+
     CheckReady("$letter");
     CheckReady("$herbs");
     CheckReady("$doll");
