@@ -25,6 +25,8 @@ title: intro
 <<declare $title1 = false>>
 <<declare $title2 = false>>
 <<declare $title3 = false>>
+<<declare $gasp = false>>
+<<declare $whispers = false>>
 
 
 
@@ -44,12 +46,14 @@ You enter.
 <<set $title1 to false>>
 
 The whispers, cries, and prayers of the attending townspeople are nearly as suffocating as their body odor.
+<<set $whispers to true>>
 -> It's simple and austere. It serves its purpose well.
 	<<set $hysteria to 1>>
 -> It's stuffy and distracting. Not an ounce of room to breathe.
 	<<set $hysteria to 1>>
 -> It's heavy and intense. You've witnessed girls meet their final fate here.
 	<<set $hysteria to 1>>
+<<set $whispers to false>>
 
 Narrow wooden benches, occupied by village men, are shoved up against the rough-hewn walls. Candlelight casts an orange shimmer across the dark canopy overhead. But that matters not to you.
 
@@ -739,7 +743,7 @@ You hoped Lizzy wouldn’t think it was you.
 title: father
 ---
 <<set $JohnPresent to true>>
-<<set $DanielPresent to false>>
+<<set $DanielPresent to true>>
 <<set $OliverPresent to false>>
 <<set $LizzyPresent to false>>
 <<set $LauraPresent to false>>
@@ -788,6 +792,49 @@ Should you reach out to her?
     <<jump glance>> 
 <<endif>>
 
+
+<<set $JohnPresent to true>>
+John: Hm. I have another question for you.
+            
+Father: What is it? 
+            
+John: What do you think of the pieces of physical evidence that the Constable discovered? We hoped that you might provide some valuable insight. 
+
+John: The women in this room have failed to compose themselves. Tell us what you think, calmly, so that we might have a worthy opinion.
+            
+Your father looks at you for a moment. He seems to have taken your request to defend the family very earnestly. He would do anything to protect you. 
+
+You panic... should you mouth something to him? You...
+->You: "The doll, father!"
+    Your father clears his throat, his brows furrowed.
+    Father: The doll speaks to the intent of Esther. Her son's passing was tragic, indeed, but... Why hold onto an item for so long?
+    Father: She might have used the thread and cloth for wrapping wounds or cleaning. Instead it has gone to waste. 
+    John: Your explanation? You think it is used to cast spells?
+    Father: It must be! She was using it to target victims. By harming the doll, she might harm then.
+    You: She brought it with her and used it to cast her spell on me.
+    Father: My daughter speaks truly. 
+    John: I see. We will ask Esther about this later. You may return to your daughter, Mr. Herrick.
+    <<jump morewitness>>
+->You: "Speak about the herbs!"
+    Your father clears his throat, his brows furrowed.
+    Father: The herbs speak to the intent of Esther. Why bring a 'healing' herb with her to the trading post?
+    Father: She might have used the thread and cloth for wrapping wounds or cleaning. Instead it has gone to waste. 
+    Father: She was planning on using it to... to brew a potion.
+    John: A potion? I understand the thought, but... How would she brew a potion outside? Why would she leave her hut to do so?
+    Father: I, ah... I do not know.
+    <<set $prudenceFavor to $prudenceFavor + 20>>
+    John: Nevermind, sir. Just return to your daughter. 
+    <<jump morewitness>>
+->You: "Discuss the letter!"
+    Your father clears his throat, his brows furrowed.
+    Father: The letter speaks to the intent of Esther. Clearly, as the Constable said, she was attempting to flee her fate. 
+    Constable: Yes! You all agree!
+    John: True. Abandoning her covenant with God here, to join a city of fisherman and brutes... Well. It's a choice. 
+    Father: And to leave her son behind, when he is about to start a family?
+    John: Unthinkable.
+    <<set $estherFavor to $estherFavor + 20>>
+    John: Well... Your input has been invaluable. You may return to your daughter, Mr. Herrick.
+    <<jump morewitness>>
 <<elseif $defensiveDad is "Neutral">>
 Father: Prudence was watching my son, James, as I purchased my furs. As you all know, this hunting season has been good to us.
 
@@ -795,7 +842,49 @@ Father: All of a sudden Prudence fell to the ground, gasping for air. Esther Goo
 
 Father: I believe she cast a spell on Prudence. Wounds appeared on her body that were not there yesterday. Though my wife and I hit our children occasionally, we could not cause such markings. 
 
+John: Very well. I have another question for you, now.
+            
+Father: What is it? 
+            
+John: What do you think of the pieces of physical evidence that the Constable discovered? We hoped that you might provide some valuable insight. 
+
+John: The women in this room have failed to compose themselves. Tell us what you think, calmly, so that we might have a worthy opinion.
+            
+Your father looks at you for a moment. Regardless of what has happened, he is still your father. He does not want you to die.
+
+You panic... should you mouth something to him? You...
+->You: "The doll, father!"
+    Your father clears his throat, his brows furrowed.
+    Father: The doll speaks to the intent of Esther. Her son's passing was tragic, indeed, but... Why hold onto an item for so long?
+    Father: She might have used the thread and cloth for wrapping wounds or cleaning. Instead it has gone to waste. 
+    John: Your explanation? You think it is used to cast spells?
+    Father: It must be! She was using it to target victims. By harming the doll, she might harm then.
+    You: She brought it with her and used it to cast her spell on me.
+    Father: My daughter speaks truly. 
+    John: I see. We will ask Esther about this later. You may return to your daughter, Mr. Herrick.
+    <<jump morewitness>>
+->You: "Speak about the herbs!"
+    Your father clears his throat, his brows furrowed.
+    Father: The herbs speak to the intent of Esther. Why bring a 'healing' herb with her to the trading post?
+    Father: She might have used the thread and cloth for wrapping wounds or cleaning. Instead it has gone to waste. 
+    Father: She was planning on using it to... to brew a potion.
+    John: A potion? I understand the thought, but... How would she brew a potion outside? Why would she leave her hut to do so?
+    Father: I, ah... I do not know.
+    <<set $prudenceFavor to $prudenceFavor + 20>>
+    John: Nevermind, sir. Just return to your daughter. 
+    <<jump morewitness>>
+->You: "Discuss the letter!"
+    Your father clears his throat, his brows furrowed.
+    Father: The letter speaks to the intent of Esther. Clearly, as the Constable said, she was attempting to flee her fate. 
+    Constable: Yes! You all agree!
+    John: True. Abandoning her covenant with God here, to join a city of fisherman and brutes... Well. It's a choice. 
+    Father: And to leave her son behind, when he is about to start a family?
+    John: Unthinkable.
+    <<set $estherFavor to $estherFavor + 20>>
+    John: Well... Your input has been invaluable. You may return to your daughter, Mr. Herrick.
+    <<jump morewitness>>
 <<elseif $defensiveDad is "Weak">>
+<<set $prudenceFavor to $prudenceFavor + 10>>
 Father: Prudence was watching my son, James, as I purchased my furs. As you all know, this hunting season has been good to us.
 
 Father: All of a sudden Prudence fell to the ground, gasping for air. Esther Goode was whispering something, but I believe it was a prayer.
@@ -809,7 +898,20 @@ Father: Yes.
 
 Daniel: Then our next witness shall be interesting to question. 
 
-Daniel: You may return to your daughter.
+John: Hm. I have another question for you.
+            
+Father: What is it? 
+            
+John: What do you think of the pieces of physical evidence that the Constable discovered? We hoped that you might provide some valuable insight. 
+
+John: The women in this room have failed to compose themselves. Tell us what you think, calmly, so that we might have a worthy opinion.
+            
+You consider what he might say in response. After all, you told him to defend the innocent. He wouldn't willingly say that any of the evidence was proof of witchcraft.
+
+Father: Useless items, I believe. Nothing of value to the investigation.
+
+John: Very well, then. Thank you. You may return to your daughter.
+
 <<endif>>
 <<jump morewitness>>
 ===
@@ -1353,38 +1455,34 @@ The time has come.
     <<set $OliverPresent to true>>
     <<jump Act3_Baker>>
 <<else>>
-    No witness was chosen. Please ensure $witness is set to "Lizzy", "Laura", or "Oliver" before entering Act 3.
-    <<stop>>
+    <<set $LizzyPresent to true>>
+    <<jump Act3_Lizzy>>
 <<endif>>
 ===
 title: Act3_Lizzy
 tags: act3 witness_lizzy
 ---
+
+Here you stand, accused of witchraft.
+
+You would never hurt a child. Your entire life you had worked hard to bring babies into the world safetly.
+
+There was nothing you valued more than the gift of life. The innocence of a babe.
+
+And now?
+
 You take a deep breath and realize that your hands are trembling.  
-The same hands that held many of the people in this room when they were babies.  
-That wiped the brows of every mother and soothed every father.
 
 You look around you.
 
-You cannot fathom it.  
-The gift of giving life was something you had always worshipped.  
-A gift from God.  
-A beacon of hope in a time where life was—well… a fight for survival.
-
-But now?  
 The faces that had once gazed upon you with love and kindness look at you differently.
 
-All around you are expressions of disgust and resentment.  
 Parents pull their children close.  
 Women shake their heads and pray.  
 Fingers point.
 
-You are vilified.
+Is there anything you could do or say? 
 
-In everyone’s eyes you have sentenced a child to unbelievable pain and suffering.  
-There is nothing worse than betraying your people, and thus betraying God.
-
-There is nothing you can do or say that will matter.  
 If you plead guilty, you will die.
 
 But no one pleads guilty.
@@ -1400,10 +1498,84 @@ You are not a coward.
 Rebecca Nurse was not a coward.  
 Neither was Mary Eastey or John Proctor.
 
-Steady yourself and reply…
+John: Esther. Do you have anything to say for yourself?
 
+You consider everything that has been discussed at the trial. 
+->You: "Prudence, my dear. Please consider what you are doing."
+    Prudence does not meet your eyes. 
+    Daniel: The guilty always beg for forgiveness.
+->You: "I have given my life to this community, and to God."
+    Everyone looks away from you. 
+    Daniel: You have used your craft as a front to practice devlish indecencies. 
+->You: "Why would I hurt a child, after all these years?"
+    Everyone looks away from you. 
+    Daniel: Who knows how many innocent babes have died by your hand?
+    
+You could not let this stand. You had to speak for yourself. What what to say without accusing another? Without causing harm?
+-> The evidence. None of it proves I am guilty. 
+
+John: How so? Explain the letter.
+
+You reply...
+-> I'm getting to old. I cannot be a burden to my son.
+-> I want to die in my mother's home. The place she was born.
+-> I'm too old to be of help to Salem anymore.
+
+John: And what of the herbs?
+
+You answer...
+-> I picked them this morning. 
+-> I was going to give them to Laura at the trading post.
+
+John: The doll?
+
+You: It was my daughter's.
+
+John: Esther...
+
+Daniel: Enough indulging her! The more she speaks the more power we give her.
+<<set $constablePresent to true>>
+
+Constable: She may be casting spells, even now!
+    
+You look desparately around for someone, anyone to speak on your behalf. There is only one person...
+->Your son.
+
+<<set $josephPresent to true>> 
+
+You: Joesph! My boy. You know I am not guilty of what they accuse me of. 
+
+Joseph looks strained, scared. Everyone turns their gaze to him.
+
+John: You speak for God. What does He have to say about your mother? About the woman who has shattered our sacred covenant?
+
+Joesph: He would say...
+
+Joesph: ...
+
+Daniel: Remember who you are, man. 
+
+John: The evidence! 
+
+Joseph looks around and lifts his chin slowly. You understand, now. He has no other option.
+
+You: My boy, my sweet boy. 
+
+Joseph: Burn her. Hang her. It matters not. 
+
+...
+
+...
+
+John: And what do you have to say to that, witch?
+
+Your heart can't take it. You feel weak. Frail. What is there left to say?
+
+What is there left to defend but your soul?
 -> "I maintain my innocence above all else."
+    <<set $gasp to true>>
     John: Very well.
+    <<set $gasp to false>>
     Daniel: Let’s see what they think. Neighbors! Who do you think is guilty? Is it just Esther? Or is there another witch in this room?
     <<if $prudenceFavor >= $estherFavor and $prudenceFavor >= $ruthFavor>>
             The crowd cries out Prudence’s name.
@@ -1423,112 +1595,120 @@ Steady yourself and reply…
         <<jump Scene_End>>
     <<endif>>
     <<jump Scene_End>>
--> "There is a witch in this room, but it is not me."
-    John: Then who do you accuse?
 
-    You look around you and name…
-    -> "Laura, my mentee."
-        Laura: The witch lies!
-        Daniel: Perhaps. But you lent her your ear.  
-        You gave her your time.  
-        You called her a teacher.
-        Daniel: We cannot risk letting you live.
-        John: It is the belief of us, who speak for all of you, Salem, that our life is a covenant with God...  
-        Sin is a rotting limb. If we do not cut it off, it consumes us entirely.
-        Daniel: Laura. Esther. We sentence both of you to die.
-        <<jump Scene_End>>
-    -> "Ruth, the mother of my accuser."
-        Ruth: She… she lies!
-        Daniel: Perhaps. But you have proved untrustworthy.  
-        You spoke too much, woman.
-        Daniel: We cannot risk letting you live.
-        John: It is the belief of us, who speak for all of you, Salem, that our life is a covenant with God...  
-        Sin is a rotting limb. If we do not cut it off, it consumes us entirely.
-        Daniel: Laura. Ruth. We sentence both of you to die.
-        <<jump Scene_End>>
-    -> "Prudence, the accuser."
-        Prudence: Why would the good people of this town believe you over me?
-
-        Daniel: The girl is right. Lizzy affirmed that when she spoke.
-
-        Daniel: Let us see what the people believe.
-
-        <<if $prudenceFavor <= $estherFavor and $prudenceFavor <= $ruthFavor>>
-            The crowd cries out Prudence’s name.
-            Daniel: Esther. Prudence. We sentence you both to die.
-            <<jump Scene_End>>
-
-        <<elseif $estherFavor < $prudenceFavor and $estherFavor <= $ruthFavor>>
-            The crowd cries out your name.
-            Daniel: Esther. We sentence you to die.
-            <<jump Scene_End>>
-
-        <<elseif $ruthFavor < $prudenceFavor and $ruthFavor < $estherFavor>>
-            The crowd cries out Ruth’s name.
-            Daniel: Esther. Ruth. We sentence you both to die.
-            <<jump Scene_End>>
-        <<else>>
-            Confusion spreads through the crowd, but their fear quickly turns on you.
-            Daniel: Esther. We sentence you to die.
-            <<jump Scene_End>>
-        <<endif>>
 ===
 title: Act3_Laura
 tags: act3 witness_laura
 ---
+Here you stand, accused of witchraft.
+
+You would never hurt a child. Your entire life you had worked hard to bring babies into the world safetly.
+
+There was nothing you valued more than the gift of life. The innocence of a babe.
+
+And now?
+
 You take a deep breath and realize that your hands are trembling.  
-The same hands that held many of the people in this room when they were babies.  
-That wiped the brows of every mother and soothed every father.
 
 You look around you.
 
-You cannot fathom it.  
-The gift of giving life was something you had always worshipped.  
-A gift from God.  
-A beacon of hope in a time where life was—well… a fight for survival.
+The faces that had once gazed upon you with love and kindness look at you differently.
 
-
-But now?  
-The faces that once gazed upon you with love and kindness
-look at you differently.
-
-
-All around you are expressions of disgust and resentment.  
 Parents pull their children close.  
 Women shake their heads and pray.  
 Fingers point.
 
+Is there anything you could do or say? 
 
-You are vilified.
-
-
-In everyone’s eyes you have sentenced a child to unbelievable pain and suffering.  
-There is nothing worse than betraying your people, and thus betraying God.
-
-
-There is nothing you can do or say that will matter.  
 If you plead guilty, you will die.
-
 
 But no one pleads guilty.
 
-
-You look at your darkened, withered skin.  
-You feel the beating of your fragile heart beneath your breast.  
-To lie about who you were—to betray the faith you lived by—
-
+You look at your pale, withered skin.  
+Feel the beating of your fragile heart under your breast.  
+To lie about who you were…  
+to betray the faith that you lived by…
 
 It is inconceivable.
-
 
 You are not a coward.  
 Rebecca Nurse was not a coward.  
 Neither was Mary Eastey or John Proctor.
 
+John: Esther. Do you have anything to say for yourself?
 
-Steady yourself and reply…
+You consider everything that has been discussed at the trial. 
+->You: "Prudence, my dear. Please consider what you are doing."
+    Prudence does not meet your eyes. 
+    Daniel: The guilty always beg for forgiveness.
+->You: "I have given my life to this community, and to God."
+    Everyone looks away from you. 
+    Daniel: You have used your craft as a front to practice devlish indecencies. 
+->You: "Why would I hurt a child, after all these years?"
+    Everyone looks away from you. 
+    Daniel: Who knows how many innocent babes have died by your hand?
+    
+You could not let this stand. You had to speak for yourself. What what to say without accusing another? Without causing harm?
+-> The evidence. None of it proves I am guilty. 
 
+John: How so? Explain the letter.
 
+You reply...
+-> I'm getting to old. I cannot be a burden to my son.
+-> I want to die in my mother's home. The place she was born.
+-> I'm too old to be of help to Salem anymore.
+
+John: And what of the herbs?
+
+You answer...
+-> I picked them this morning. 
+-> I was going to give them to Laura at the trading post.
+
+John: The doll?
+
+You: It was my daughter's.
+
+John: Esther...
+
+Daniel: Enough indulging her! The more she speaks the more power we give her.
+<<set $constablePresent to true>>
+
+Constable: She may be casting spells, even now!
+    
+You look desparately around for someone, anyone to speak on your behalf. There is only one person...
+->Your son.
+
+<<set $josephPresent to true>> 
+
+You: Joesph! My boy. You know I am not guilty of what they accuse me of. 
+
+Joseph looks strained, scared. Everyone turns their gaze to him.
+
+John: You speak for God. What does He have to say about your mother? About the woman who has shattered our sacred covenant?
+
+Joesph: He would say...
+
+Joesph: ...
+
+Daniel: Remember who you are, man. 
+
+John: The evidence! 
+
+Joseph looks around and lifts his chin slowly. You understand, now. He has no other option.
+
+You: My boy, my sweet boy. 
+
+Joseph: Burn her. Hang her. It matters not. 
+
+...
+
+...
+
+John: And what do you have to say to that, witch?
+
+Your heart can't take it. You feel weak. Frail. What is there left to say?
+
+What is there left to defend but your soul?
 -> "I maintain my innocence above all else."
     John: Very well.
     Daniel: Let us see what the people believe.  
@@ -1561,126 +1741,121 @@ Steady yourself and reply…
     <<jump Scene_End>>
 
 
--> "There is a witch in this room, but it is not me."
-    John: Then who do you accuse?
 
-
-    You look around you and name…
-
-
-    -> "Laura, my mentee."
-        Laura: The witch lies!
-        Daniel: Perhaps. But you lent her your ear.  
-        You gave her your time.  
-        You called her a teacher.
-        Daniel: We cannot risk letting you live.
-        John: It is the belief of us, who speak for all of you, Salem, that our life is a covenant with God...  
-        Sin is a rotting limb. If we do not cut it off, it consumes us entirely.
-        Daniel: Laura. Esther. We sentence both of you to die.
-        <<jump Scene_End>>
-
-
-    -> "Ruth, the mother of my accuser."
-        Ruth: She… she lies!
-        Daniel: Perhaps. But you have proved untrustworthy.  
-        You spoke too much, woman.
-        Daniel: We cannot risk letting you live.
-        John: It is the belief of us, who speak for all of you, Salem, that our life is a covenant with God...  
-        Sin is a rotting limb. If we do not cut it off, it consumes us entirely.
-        Daniel: Laura. Ruth. We sentence both of you to die.
-        <<jump Scene_End>>
-
-
-    -> "Prudence, the accuser."
-        Prudence: Why would the good people of this town believe you over me?
-
-
-        Daniel: Let us see what the people believe.  
-        Neighbors! Who do you think is guilty?
-
-
-        <<if $prudenceFavor <= $estherFavor and $prudenceFavor <= $ruthFavor>>
-            The crowd cries out Prudence’s name.
-            Daniel: Esther. Prudence. We sentence you both to die.
-            <<jump Scene_End>>
-
-
-        <<elseif $estherFavor < $prudenceFavor and $estherFavor <= $ruthFavor>>
-            The crowd cries out your name.
-            Daniel: Esther. We sentence you to die.
-            <<jump Scene_End>>
-
-
-        <<elseif $ruthFavor < $prudenceFavor and $ruthFavor < $estherFavor>>
-            The crowd cries out Ruth’s name.
-            Daniel: Esther. Ruth. We sentence you both to die.
-            <<jump Scene_End>>
-
-
-        <<else>>
-            Unease ripples through the crowd, but their fear quickly focuses on you.
-            Daniel: Esther. We sentence you to die.
-            <<jump Scene_End>>
-        <<endif>>
 ===
 title: Act3_Baker
 tags: act3 witness_baker
 ---
-You take a deep breath and realize that your hands are trembling.  
-The same hands that held many of the people in this room when they were babies.  
-That wiped the brows of every mother and soothed every father.
 
+Here you stand, accused of witchraft.
+
+You would never hurt a child. Your entire life you had worked hard to bring babies into the world safetly.
+
+There was nothing you valued more than the gift of life. The innocence of a babe.
+
+And now?
+
+You take a deep breath and realize that your hands are trembling.  
 
 You look around you.
 
+The faces that had once gazed upon you with love and kindness look at you differently.
 
-You cannot fathom it.  
-The gift of giving life was something you had always worshipped.  
-A gift from God.  
-A beacon of hope in a time where life was—well… a fight for survival.
-
-
-But now?  
-The faces that once gazed upon you with love and kindness
-look at you differently.
-
-
-All around you are expressions of disgust and resentment.  
 Parents pull their children close.  
 Women shake their heads and pray.  
 Fingers point.
 
+Is there anything you could do or say? 
 
-You are vilified.
-
-
-In everyone’s eyes you have sentenced a child to unbelievable pain and suffering.  
-There is nothing worse than betraying your people, and thus betraying God.
-
-
-There is nothing you can do or say that will matter.  
 If you plead guilty, you will die.
-
 
 But no one pleads guilty.
 
-
-You look at your darkened, withered skin.  
-You feel the beating of your fragile heart beneath your breast.  
-To lie about who you were—to betray the faith you lived by—
-
+You look at your pale, withered skin.  
+Feel the beating of your fragile heart under your breast.  
+To lie about who you were…  
+to betray the faith that you lived by…
 
 It is inconceivable.
-
 
 You are not a coward.  
 Rebecca Nurse was not a coward.  
 Neither was Mary Eastey or John Proctor.
 
+John: Esther. Do you have anything to say for yourself?
 
-Steady yourself and reply…
+You consider everything that has been discussed at the trial. 
+->You: "Prudence, my dear. Please consider what you are doing."
+    Prudence does not meet your eyes. 
+    Daniel: The guilty always beg for forgiveness.
+->You: "I have given my life to this community, and to God."
+    Everyone looks away from you. 
+    Daniel: You have used your craft as a front to practice devlish indecencies. 
+->You: "Why would I hurt a child, after all these years?"
+    Everyone looks away from you. 
+    Daniel: Who knows how many innocent babes have died by your hand?
+    
+You could not let this stand. You had to speak for yourself. What what to say without accusing another? Without causing harm?
+-> The evidence. None of it proves I am guilty. 
 
+John: How so? Explain the letter.
 
+You reply...
+-> I'm getting to old. I cannot be a burden to my son.
+-> I want to die in my mother's home. The place she was born.
+-> I'm too old to be of help to Salem anymore.
+
+John: And what of the herbs?
+
+You answer...
+-> I picked them this morning. 
+-> I was going to give them to Laura at the trading post.
+
+John: The doll?
+
+You: It was my daughter's.
+
+John: Esther...
+
+Daniel: Enough indulging her! The more she speaks the more power we give her.
+<<set $constablePresent to true>>
+
+Constable: She may be casting spells, even now!
+    
+You look desparately around for someone, anyone to speak on your behalf. There is only one person...
+->Your son.
+
+<<set $josephPresent to true>> 
+
+You: Joesph! My boy. You know I am not guilty of what they accuse me of. 
+
+Joseph looks strained, scared. Everyone turns their gaze to him.
+
+John: You speak for God. What does He have to say about your mother? About the woman who has shattered our sacred covenant?
+
+Joesph: He would say...
+
+Joesph: ...
+
+Daniel: Remember who you are, man. 
+
+John: The evidence! 
+
+Joseph looks around and lifts his chin slowly. You understand, now. He has no other option.
+
+You: My boy, my sweet boy. 
+
+Joseph: Burn her. Hang her. It matters not. 
+
+...
+
+...
+
+John: And what do you have to say to that, witch?
+
+Your heart can't take it. You feel weak. Frail. What is there left to say?
+
+What is there left to defend but your soul?
 -> "I maintain my innocence above all else."
     John: Very well.
     Daniel: Let us see what the people believe.  
@@ -1713,70 +1888,12 @@ Steady yourself and reply…
     <<jump Scene_End>>
 
 
--> "There is a witch in this room, but it is not me."
-    John: Then who do you accuse?
 
-    You look around you and name…
-
-    -> "Laura, my mentee."
-        Laura: The witch lies!
-        Daniel: Perhaps. But you lent her your ear.  
-        You gave her your time.  
-        You called her a teacher.
-        Daniel: We cannot risk letting you live.
-        John: It is the belief of us, who speak for all of you, Salem, that our life is a covenant with God...  
-        Sin is a rotting limb. If we do not cut it off, it consumes us entirely.
-        Daniel: Laura. Esther. We sentence both of you to die.
-        <<jump Scene_End>>
-
-
-    -> "Ruth, the mother of my accuser."
-        Ruth: She… she lies!
-        Daniel: Perhaps. But you have proved untrustworthy.  
-        You spoke too much, woman.
-        Daniel: We cannot risk letting you live.
-        John: It is the belief of us, who speak for all of you, Salem, that our life is a covenant with God...  
-        Sin is a rotting limb. If we do not cut it off, it consumes us entirely.
-        Daniel: Laura. Ruth. We sentence both of you to die.
-        <<jump Scene_End>>
-
-
-    -> "Prudence, the accuser."
-        Prudence: Why would the good people of this town believe you over me?
-
-
-        Daniel: Let us see what the people believe.  
-        Neighbors! Who do you think is guilty?
-
-
-        <<if $prudenceFavor <= $estherFavor and $prudenceFavor <= $ruthFavor>>
-            The crowd cries out Prudence’s name.
-            Daniel: Esther. Prudence. We sentence you both to die.
-            <<jump Scene_End>>
-
-
-        <<elseif $estherFavor < $prudenceFavor and $estherFavor <= $ruthFavor>>
-            The crowd cries out your name.
-            Daniel: Esther. We sentence you to die.
-            <<jump Scene_End>>
-
-
-        <<elseif $ruthFavor < $prudenceFavor and $ruthFavor < $estherFavor>>
-            The crowd cries out Ruth’s name.
-            Daniel: Esther. Ruth. We sentence you both to die.
-            <<jump Scene_End>>
-
-
-        <<else>>
-            Unease ripples through the crowd, but their fear quickly focuses on you.
-            Daniel: Esther. We sentence you to die.
-            <<jump Scene_End>>
-        <<endif>>
 ===
 title: Scene_End
 tags: act3 end
 ---
-Somewhere in the room, your son calls out to you.  
+Somewhere in the room, a person calls out to you. You think that it is not your son. 
 Prudence wails.  
 Why is she wailing?  
 It does not matter.
@@ -1785,9 +1902,10 @@ It does not matter.
 There is only one person you think of right now.
 
 
-You recall what your mother told you when you were little:  
-My child, a nightmare is but a reminder that the dark is unrelenting.  
-It is our job to close our eyes each night and trust that God will wake us up.
+You recall what your mother told you when you were little...
+  
+<i>"My child, a nightmare is but a reminder that the dark is unrelenting...  
+<i>It is our job to close our eyes each night and trust that God will wake us up."</i>
 
 
 You close your eyes.

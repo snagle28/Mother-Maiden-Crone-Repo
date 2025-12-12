@@ -9,6 +9,12 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scene/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/MainScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TrackVars.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TrackVars.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Yarn Files/Draft 2.yarn" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Yarn Files/Draft 2.yarn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Yarn Files/MMC Dialogue.yarnproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Yarn Files/MMC Dialogue.yarnproject.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Yarn Files/YarnScript (4).yarn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Yarn Files/YarnScript (4).yarn.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +29,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Advance.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DialogueTracker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TrackVars.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@2a2241f53fcd/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/dev.yarnspinner.unity@bc7ddd3e5306/Runtime/Storage/InMemoryVariableStorage.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -130,6 +138,8 @@
       <workItem from="1765223962257" duration="3802000" />
       <workItem from="1765335347443" duration="412000" />
       <workItem from="1765336075065" duration="1355000" />
+      <workItem from="1765400136141" duration="3084000" />
+      <workItem from="1765506571615" duration="1833000" />
     </task>
     <servers />
   </component>

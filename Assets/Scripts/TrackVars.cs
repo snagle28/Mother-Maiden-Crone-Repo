@@ -98,6 +98,10 @@ public class TrackVars : MonoBehaviour
     
     void Update()
     {
+        
+        //CALL SOUND FUNCTIONS HERE
+        CheckSound();
+        
         /*
          * hysteria system
          */
@@ -369,6 +373,7 @@ public class TrackVars : MonoBehaviour
     [SerializeField] private GameObject[] evidenceObjects;  // Add any other evidence objects [e.g., letter, herbs, etc.]
     
     
+    
     void CheckReady(string evidenceName)
     {
         if (variableStorage.TryGetValue(evidenceName, out bool currentValue))
@@ -387,6 +392,61 @@ public class TrackVars : MonoBehaviour
             }
             
         }
+    }
+    
+    //put booleans here to track if sound has played
+    bool hasWhispered= false;
+    bool hasGasped = false;
+    
+    void CheckSound()
+    {   
+        /*TEMPLATE:
+         * if (variableStorage.TryGetValue("$variableName", out bool isPlayingVariableName))
+        {
+            // Check if the value changed from false to true
+            if (isPlayingVariableName && !hasVariabledPlayed) 
+            {
+                Debug.Log($"sound playing");
+                //play sound here
+                hasVariablePlayed = true;
+            }
+            else if (!isPlayingVariableName)
+            {
+                hasVariablePlayed = false;
+            }
+        }
+         */
+        //SOUND ONE
+        if (variableStorage.TryGetValue("$whispers", out bool isWhispering))
+        {
+            // Check if the value changed from false to true
+            if (isWhispering && !hasWhispered)
+            {
+                Debug.Log($"whispering playing");
+                //play sound here
+                hasWhispered = true;
+            }
+            else if (!isWhispering)
+            {
+                hasWhispered = false;
+            }
+        }
+        //SOUND TWO
+        if (variableStorage.TryGetValue("$gasp", out bool isGasping))
+        {
+            // Check if the value changed from false to true
+            if (isGasping && !hasGasped)
+            {
+                Debug.Log($"sound playing");
+                //play sound here
+                hasGasped = true;
+            }
+            else if (!isGasping)
+            {
+                hasGasped = false;
+            }
+        }
+        
     }
 
     
