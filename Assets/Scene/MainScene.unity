@@ -2561,6 +2561,7 @@ MonoBehaviour:
   bobHeight: 10
   letterVisible: 0
   herbsVisible: 0
+  dollVisible: 0
   evidenceObjects:
   - {fileID: 367866122}
   - {fileID: 1527973430}
@@ -10737,7 +10738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: startNode
-      value: intro
+      value: Act3_Titlecard
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: yarnProject
