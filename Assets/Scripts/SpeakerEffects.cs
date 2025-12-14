@@ -13,6 +13,7 @@ public class SpeakerEffects : MonoBehaviour
 
     public GameObject emissivGO;
     
+    
     public void StartTalking()
     {
         print(this.gameObject.name + " is talking!");
@@ -20,6 +21,7 @@ public class SpeakerEffects : MonoBehaviour
         {
             animator.SetBool(talkingBoolName, true);
             emissivGO.SetActive(true);
+            
         }
 
         if (audioSource && talkingLoop)

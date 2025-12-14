@@ -28,6 +28,7 @@ title: intro
 <<declare $whispers = false>>
 <<declare $RuthPresent = false>>
 <<declare $MC = "Ruth">> 
+<<declare $endGame = false>>
 
 
 You had seen many a witch hang. The sight was gruesome, but no more than the burning red of pox or the stench of rotten flesh. No more than anything else you would see in the village.
@@ -93,7 +94,7 @@ title: entrances
 ---
 Constable: Behold: the accused!
    <<set $EstherPresent to true>>
-   <<set $ConstablePresent to true>>
+   <<set $ConstablePre   sent to true>>
 
 
 You knew her very well. It’s your neighbor, Esther Goode.
@@ -2462,7 +2463,8 @@ You recall what your mother told you when you were little...
 You close your eyes.
 
 
-
+......
+<<set $endGame to true>>
 
 <<stop>>
 ===
