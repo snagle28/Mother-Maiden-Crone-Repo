@@ -24,6 +24,7 @@ public class TrackVars : MonoBehaviour
     [SerializeField] private GameObject title1Object;
     [SerializeField] private GameObject title2Object;
     [SerializeField] private GameObject title3Object;
+    [SerializeField] private GameObject EndObject;
     [SerializeField] private GameObject ruthGameObject;
 
     [SerializeField] private GameObject endingGameObject;
@@ -52,6 +53,7 @@ public class TrackVars : MonoBehaviour
     bool prevTitle1Present = false;
     bool prevTitle2Present = false;
     bool prevTitle3Present = false;
+    bool prevEndingTitlePresent = false;
 
     bool prevEnding = false;
 
@@ -210,6 +212,7 @@ public class TrackVars : MonoBehaviour
         TitleEffects("$title1", ref prevTitle1Present, title1Object);
         TitleEffects("$title2", ref prevTitle2Present, title2Object);
         TitleEffects("$title3", ref prevTitle3Present, title3Object);
+        TitleEffects("$endGame", ref prevEndingTitlePresent, EndObject);
 
         CheckEnding();
 
