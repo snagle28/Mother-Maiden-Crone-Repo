@@ -94,7 +94,7 @@ title: entrances
 ---
 Constable: Behold: the accused!
    <<set $EstherPresent to true>>
-   <<set $ConstablePre   sent to true>>
+   <<set $ConstablePresent to true>>
 
 
 You knew her very well. It’s your neighbor, Esther Goode.
