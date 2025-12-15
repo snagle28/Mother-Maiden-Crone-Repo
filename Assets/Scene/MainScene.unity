@@ -11066,9 +11066,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Dearest John, \n\nI hope you are well. How are the girls? How is Sarah?
-    Tell me she is well. I wish to hold her.\n\nI miss you, and I yearn for the company
-    of a child once more. \n\nSigned, Esther Goode."
+  m_text: "\"A letter detailing Esther\u2019s wishes to go and live with her cousin,
+    Gurney, in Boston. In it she describes feeling lonely and isolated, and expresses
+    worry that she will be a burden to Joseph, especially as she gets older. \r\n\r\nShe
+    hopes to help raise Gurney\u2019s children and perhaps make some money assisting
+    in midwifery in Boston, so that she can send the money back to her son and his
+    new family.\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cbc422041bcd1844f932e0005d635f00, type: 2}
   m_sharedMaterial: {fileID: 4511921686078182731, guid: cbc422041bcd1844f932e0005d635f00, type: 2}
