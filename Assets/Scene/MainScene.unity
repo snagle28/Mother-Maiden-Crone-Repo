@@ -11996,6 +11996,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1801442546 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6288fdd16751fbf44b8c068fe3340bd0, type: 3}
+  m_PrefabInstance: {fileID: 1281804700}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1806729779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13122,7 +13127,7 @@ MonoBehaviour:
   talkingBoolName: IsTalking
   audioSource: {fileID: 154425533}
   talkingLoop: {fileID: 8300000, guid: 7e71e600d15a11f40b65d75ac0537e29, type: 3}
-  emissivGO: {fileID: 0}
+  emissivGO: {fileID: 1801442546}
 --- !u!1001 &2079959972
 PrefabInstance:
   m_ObjectHideFlags: 0
