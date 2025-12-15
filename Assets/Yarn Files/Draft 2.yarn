@@ -1287,7 +1287,7 @@ Oliver: I saw it this morning, after she attacked Prudence. She left the trading
 
 
 Daniel: Then we have a new piece of evidence. Esther Goode!
-<<set $EstherPrestnt to true>>
+<<set $EstherPresent to true>>
 
 
 Daniel: you stand accused of casting spells, harming Prudence Herrick, and feeding the evil spirits of the woods. What do you have to say for yourself?
@@ -1412,7 +1412,7 @@ You recall what henbane does. You say...
    Daniel: Esther Goode, you stand accused of casting spells, harming Prudence Herrick, brewing potions, and bewitchment. What do you have to say for yourself?
    <<endif>>
 
-<<set $EstherPrestnt to true>>
+<<set $EstherPresent to true>>
 Esther: That God knows I am innocent.
 
 
@@ -1660,7 +1660,7 @@ Oliver: I saw it this morning, after she attacked Prudence. She left the trading
 
 Daniel: Then we have a new piece of evidence. Esther Goode!
 
-<<set $EstherPrestnt to true>>
+<<set $EstherPresent to true>>
 
 
 Daniel: you stand accused of casting spells, harming Prudence Herrick, and feeding the evil spirits of the woods. What do you have to say for yourself?
@@ -1741,7 +1741,7 @@ Oliver: I saw it this morning, after she attacked Prudence. She left the trading
 
 Daniel: Then we have a new piece of evidence. Esther Goode!
 
-<<set $EstherPrestnt to true>>
+<<set $EstherPresent to true>>
 
 
 Daniel: you stand accused of casting spells, harming Prudence Herrick, and feeding the evil spirits of the woods. What do you have to say for yourself?
