@@ -6,6 +6,8 @@ using System.Collections.Generic;
 
 public class TrackVars : MonoBehaviour
 {
+    //added audio source ref for paper sounds
+    public AudioSource audioSource;
     [Header("Yarn References")]
     [SerializeField] private DialogueRunner dialogueRunner;
     public InMemoryVariableStorage variableStorage;
@@ -29,7 +31,9 @@ public class TrackVars : MonoBehaviour
 
     [SerializeField] private GameObject endingGameObject;
 
-    
+    [SerializeField] private GameObject physicalEvidence;
+
+
 
     int previousHysteria = int.MinValue;
     int prevPrudenceFavor = int.MinValue;
@@ -54,6 +58,12 @@ public class TrackVars : MonoBehaviour
     bool prevTitle2Present = false;
     bool prevTitle3Present = false;
     bool prevEndingTitlePresent = false;
+    bool hasGasped = false;
+    bool hasWhispers = false;
+    bool hasCrying = false;
+    bool hasBooing = false;
+    bool hasWailing = false;
+    bool hasDoor = false;
 
     bool prevEnding = false;
 
@@ -114,11 +124,18 @@ public class TrackVars : MonoBehaviour
 
     public Image image;
 
+    public AudioClip clickSound;
     void Update()
     {
         /*
          * hysteria system
          */
+         CheckSound();
+        //if (Input.GetMouseButtonDown(0))
+        //{
+           // audioSource.PlayOneShot(clickSound);
+        //}
+
         if (variableStorage.TryGetValue("$hysteria", out float hysteriaFloat))
         {
             int currentHysteria = Mathf.RoundToInt(hysteriaFloat);
@@ -218,6 +235,108 @@ public class TrackVars : MonoBehaviour
 
     }
 
+
+    public AudioClip gaspSound;
+    public AudioClip whisperSound;
+    public AudioClip wailSound;
+    public AudioClip crySound;
+    public AudioClip booSound;
+    public AudioClip doorSound;
+    void CheckSound()
+    {
+        if (variableStorage.TryGetValue(variableName: "$gasp", out bool isGasping))
+        {
+            //check if the value changed from false to true
+            if (isGasping && !hasGasped)
+            {
+                Debug.Log($"sound playing");
+                audioSource.PlayOneShot(gaspSound);
+                hasGasped = true;
+            }
+            else if (!isGasping)
+            {
+                hasGasped = false;
+            }
+        }
+
+        if (variableStorage.TryGetValue(variableName: "$whispers", out bool isWhispering))
+        {
+            //check if the value changed from false to true
+            if (isWhispering && !hasWhispers)
+            {
+                Debug.Log($"sound playing");
+                audioSource.PlayOneShot(whisperSound);
+                hasWhispers = true;
+            }
+            else if (!isWhispering)
+            {
+                hasWhispers = false;
+            }
+        }
+
+        if (variableStorage.TryGetValue(variableName: "$crying", out bool isCrying))
+        {
+            //check if the value changed from false to true
+            if (isCrying&& !hasCrying)
+            {
+                Debug.Log($"sound playing");
+                audioSource.PlayOneShot(crySound);
+                hasCrying = true;
+            }
+            else if (!hasCrying)
+            {
+                hasCrying = false;
+            }
+        }
+
+        if (variableStorage.TryGetValue(variableName: "$boo", out bool isBooing))
+        {
+            //check if the value changed from false to true
+            if (isBooing && !hasBooing)
+            {
+                Debug.Log($"sound playing");
+                audioSource.PlayOneShot(booSound);
+                hasBooing = true;
+            }
+            else if (!isBooing)
+            {
+                hasBooing = false;
+            }
+        }
+
+
+        if (variableStorage.TryGetValue(variableName: "$wailing", out bool isWailing))
+        {
+            //check if the value changed from false to true
+            if (isWailing && !hasWailing)
+            {
+                Debug.Log($"sound playing");
+                audioSource.PlayOneShot(wailSound);
+                hasWailing = true;
+            }
+            else if (!isWailing)
+            {
+                hasWailing = false;
+            }
+        }
+
+        if (variableStorage.TryGetValue(variableName: "$door", out bool isDoor))
+        {
+            //check if the value changed from false to true
+            if (isDoor && !hasDoor)
+            {
+                Debug.Log($"sound playing");
+                audioSource.PlayOneShot(doorSound);
+                hasDoor = true;
+            }
+            else if (!isDoor)
+            {
+                hasDoor = false;
+            }
+        }
+
+    }
+
     void CheckPV(string variableName, ref bool previousValue, string characterName, GameObject targetObject)
     {
         if (variableStorage == null)
@@ -265,6 +384,7 @@ public class TrackVars : MonoBehaviour
             if (currentStage && !previousStage)
             {
                 targetObject.SetActive(true);
+                physicalEvidence.SetActive(false);
                 previousStage = true;
 
             }
@@ -272,6 +392,7 @@ public class TrackVars : MonoBehaviour
             {
 
                 targetObject.SetActive(false);
+                physicalEvidence.SetActive(true);
                 previousStage = false;
 
             }
@@ -283,6 +404,8 @@ public class TrackVars : MonoBehaviour
 
     }
 
+    public AudioClip rustleINSound;
+    public AudioClip rustleOUTSound;
     void PlayAnim(GameObject targetObject, string characterName)
     {
         if (targetObject != null)
@@ -291,6 +414,7 @@ public class TrackVars : MonoBehaviour
             if (animator != null)
             {
                 animator.SetTrigger("risingUp");
+                audioSource.PlayOneShot(rustleINSound);
             }
             else
             {
@@ -311,6 +435,7 @@ public class TrackVars : MonoBehaviour
             if (animator != null)
             {
                 animator.SetTrigger("goingDown");
+                audioSource.PlayOneShot(rustleOUTSound);
             }
             else
             {
