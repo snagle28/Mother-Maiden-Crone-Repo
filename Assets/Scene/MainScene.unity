@@ -2935,11 +2935,11 @@ MonoBehaviour:
   bobAmplitude: 100
   bobSpeed: 0.05
   image: {fileID: 326198240}
-  gaspSound: {fileID: 8300000, guid: c71861c056faf6e4aac04890898d632c, type: 3}
-  whisperSound: {fileID: 8300000, guid: 7d8eefa92ede04240a87e6801ef855c2, type: 3}
-  wailSound: {fileID: 8300000, guid: 43d4a262c2d80bf41bc2d0087dfcdcad, type: 3}
-  crySound: {fileID: 8300000, guid: ef52259348210dc41821cc77f5e0307f, type: 3}
-  booSound: {fileID: 8300000, guid: adf2d987139bae942adb2c63c7b59bdf, type: 3}
+  gaspSound: {fileID: 8300000, guid: fbc985f36c9c175439613402c7bed22d, type: 3}
+  whisperSound: {fileID: 8300000, guid: a735d57477c5c644eb9237363a3ca547, type: 3}
+  wailSound: {fileID: 8300000, guid: 05f9ccb4626c6c3458b86789ed667989, type: 3}
+  crySound: {fileID: 8300000, guid: a0cfd6a555da55e428c6db8894609468, type: 3}
+  booSound: {fileID: 8300000, guid: 1058251930341284386fc0603da96896, type: 3}
   bobHeight: 10
   letterVisible: 0
   herbsVisible: 0
