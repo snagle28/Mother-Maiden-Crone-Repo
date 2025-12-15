@@ -29,6 +29,7 @@ title: intro
 <<declare $crying = false>>
 <<declare $wailing = false>>
 <<declare $boo = false>>
+<<declare $door = false>>
 <<declare $RuthPresent = false>>
 <<declare $MC = "Ruth">> 
 <<declare $endGame = false>>
@@ -43,8 +44,9 @@ The first time you heard it you were with your son. He had cried, then. Then the
 
 No more do you linger in the depths of memory. You step into the Meeting House. The sound engulfs you. The trial begins.
 
-
+<<set $door to true>>
 As the doors close behind you, a gust of summer air blows into the space. Your hair is plastered to your forehead and neck.
+<<set $door to false>>
 
 
 

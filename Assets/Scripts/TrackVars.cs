@@ -63,6 +63,7 @@ public class TrackVars : MonoBehaviour
     bool hasCrying = false;
     bool hasBooing = false;
     bool hasWailing = false;
+    bool hasDoor = false;
 
     bool prevEnding = false;
 
@@ -123,12 +124,18 @@ public class TrackVars : MonoBehaviour
 
     public Image image;
 
+    public AudioClip clickSound;
     void Update()
     {
         /*
          * hysteria system
          */
          CheckSound();
+        //if (Input.GetMouseButtonDown(0))
+        //{
+           // audioSource.PlayOneShot(clickSound);
+        //}
+
         if (variableStorage.TryGetValue("$hysteria", out float hysteriaFloat))
         {
             int currentHysteria = Mathf.RoundToInt(hysteriaFloat);
@@ -234,6 +241,7 @@ public class TrackVars : MonoBehaviour
     public AudioClip wailSound;
     public AudioClip crySound;
     public AudioClip booSound;
+    public AudioClip doorSound;
     void CheckSound()
     {
         if (variableStorage.TryGetValue(variableName: "$gasp", out bool isGasping))
@@ -312,6 +320,21 @@ public class TrackVars : MonoBehaviour
             }
         }
 
+        if (variableStorage.TryGetValue(variableName: "$door", out bool isDoor))
+        {
+            //check if the value changed from false to true
+            if (isDoor && !hasDoor)
+            {
+                Debug.Log($"sound playing");
+                audioSource.PlayOneShot(doorSound);
+                hasDoor = true;
+            }
+            else if (!isDoor)
+            {
+                hasDoor = false;
+            }
+        }
+
     }
 
     void CheckPV(string variableName, ref bool previousValue, string characterName, GameObject targetObject)
@@ -381,6 +404,8 @@ public class TrackVars : MonoBehaviour
 
     }
 
+    public AudioClip rustleINSound;
+    public AudioClip rustleOUTSound;
     void PlayAnim(GameObject targetObject, string characterName)
     {
         if (targetObject != null)
@@ -389,6 +414,7 @@ public class TrackVars : MonoBehaviour
             if (animator != null)
             {
                 animator.SetTrigger("risingUp");
+                audioSource.PlayOneShot(rustleINSound);
             }
             else
             {
@@ -409,6 +435,7 @@ public class TrackVars : MonoBehaviour
             if (animator != null)
             {
                 animator.SetTrigger("goingDown");
+                audioSource.PlayOneShot(rustleOUTSound);
             }
             else
             {

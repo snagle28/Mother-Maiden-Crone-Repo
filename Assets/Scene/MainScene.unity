@@ -191,7 +191,7 @@ MonoBehaviour:
   animator: {fileID: 16964144}
   talkingBoolName: IsTalking
   audioSource: {fileID: 154425533}
-  talkingLoop: {fileID: 8300000, guid: f8863448964c0164db5f847e0ff6bf9a, type: 3}
+  talkingLoop: {fileID: 8300000, guid: 7e71e600d15a11f40b65d75ac0537e29, type: 3}
   emissivGO: {fileID: 1068947131}
 --- !u!1 &32916122
 GameObject:
@@ -1042,8 +1042,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_Resource: {fileID: 8300000, guid: b85e9513d86f3d5429c512b6ec8663f8, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1275,7 +1275,7 @@ MonoBehaviour:
   animator: {fileID: 154625437}
   talkingBoolName: IsTalking
   audioSource: {fileID: 154425533}
-  talkingLoop: {fileID: 8300000, guid: f8863448964c0164db5f847e0ff6bf9a, type: 3}
+  talkingLoop: {fileID: 8300000, guid: 7e71e600d15a11f40b65d75ac0537e29, type: 3}
   emissivGO: {fileID: 491952603}
 --- !u!95 &154625437
 Animator:
@@ -2650,7 +2650,7 @@ MonoBehaviour:
   animator: {fileID: 395355333}
   talkingBoolName: IsTalking
   audioSource: {fileID: 154425533}
-  talkingLoop: {fileID: 8300000, guid: f8863448964c0164db5f847e0ff6bf9a, type: 3}
+  talkingLoop: {fileID: 8300000, guid: 7e71e600d15a11f40b65d75ac0537e29, type: 3}
   emissivGO: {fileID: 392163270}
 --- !u!1 &402747564
 GameObject:
@@ -2935,11 +2935,15 @@ MonoBehaviour:
   bobAmplitude: 100
   bobSpeed: 0.05
   image: {fileID: 326198240}
+  clickSound: {fileID: 8300000, guid: d12a4ad8758fa6c428b4903f15b23de9, type: 3}
   gaspSound: {fileID: 8300000, guid: fbc985f36c9c175439613402c7bed22d, type: 3}
   whisperSound: {fileID: 8300000, guid: a735d57477c5c644eb9237363a3ca547, type: 3}
   wailSound: {fileID: 8300000, guid: 05f9ccb4626c6c3458b86789ed667989, type: 3}
   crySound: {fileID: 8300000, guid: a0cfd6a555da55e428c6db8894609468, type: 3}
   booSound: {fileID: 8300000, guid: 1058251930341284386fc0603da96896, type: 3}
+  doorSound: {fileID: 8300000, guid: ce48ea0176931ee49b8ef580e1f13ac5, type: 3}
+  rustleINSound: {fileID: 8300000, guid: 093547c5adbbfcd47a7d67b2d0206d4b, type: 3}
+  rustleOUTSound: {fileID: 8300000, guid: ae3c6824b09f0f84185844d7ad8ab912, type: 3}
   bobHeight: 10
   letterVisible: 0
   herbsVisible: 0
@@ -4005,7 +4009,7 @@ MonoBehaviour:
   animator: {fileID: 548213359}
   talkingBoolName: IsTalking
   audioSource: {fileID: 154425533}
-  talkingLoop: {fileID: 8300000, guid: f8863448964c0164db5f847e0ff6bf9a, type: 3}
+  talkingLoop: {fileID: 8300000, guid: 7e71e600d15a11f40b65d75ac0537e29, type: 3}
   emissivGO: {fileID: 436919164}
 --- !u!4 &550718763 stripped
 Transform:
@@ -4831,7 +4835,7 @@ MonoBehaviour:
   animator: {fileID: 679989369}
   talkingBoolName: IsTalking
   audioSource: {fileID: 154425533}
-  talkingLoop: {fileID: 8300000, guid: f8863448964c0164db5f847e0ff6bf9a, type: 3}
+  talkingLoop: {fileID: 8300000, guid: 7e71e600d15a11f40b65d75ac0537e29, type: 3}
   emissivGO: {fileID: 1193125708}
 --- !u!1001 &686053190
 PrefabInstance:
@@ -5346,7 +5350,7 @@ MonoBehaviour:
   animator: {fileID: 764240310}
   talkingBoolName: IsTalking
   audioSource: {fileID: 154425533}
-  talkingLoop: {fileID: 8300000, guid: f8863448964c0164db5f847e0ff6bf9a, type: 3}
+  talkingLoop: {fileID: 8300000, guid: 7e71e600d15a11f40b65d75ac0537e29, type: 3}
   emissivGO: {fileID: 968179631}
 --- !u!1 &780144704
 GameObject:
@@ -5430,7 +5434,7 @@ MonoBehaviour:
   animator: {fileID: 808373837}
   talkingBoolName: IsTalking
   audioSource: {fileID: 154425533}
-  talkingLoop: {fileID: 8300000, guid: f8863448964c0164db5f847e0ff6bf9a, type: 3}
+  talkingLoop: {fileID: 8300000, guid: 7e71e600d15a11f40b65d75ac0537e29, type: 3}
   emissivGO: {fileID: 1489123123}
 --- !u!95 &808373837
 Animator:
@@ -7335,7 +7339,7 @@ MonoBehaviour:
   animator: {fileID: 1104574977}
   talkingBoolName: IsTalking
   audioSource: {fileID: 154425533}
-  talkingLoop: {fileID: 8300000, guid: f8863448964c0164db5f847e0ff6bf9a, type: 3}
+  talkingLoop: {fileID: 8300000, guid: 7e71e600d15a11f40b65d75ac0537e29, type: 3}
   emissivGO: {fileID: 850141928}
 --- !u!1 &1114457306
 GameObject:
@@ -8266,7 +8270,7 @@ MonoBehaviour:
   animator: {fileID: 1195678589}
   talkingBoolName: IsTalking
   audioSource: {fileID: 154425533}
-  talkingLoop: {fileID: 8300000, guid: f8863448964c0164db5f847e0ff6bf9a, type: 3}
+  talkingLoop: {fileID: 8300000, guid: 7e71e600d15a11f40b65d75ac0537e29, type: 3}
   emissivGO: {fileID: 1176796017}
 --- !u!1 &1205804853
 GameObject:
@@ -10506,7 +10510,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   talkingBoolName: IsTalking
   audioSource: {fileID: 154425533}
-  talkingLoop: {fileID: 8300000, guid: f8863448964c0164db5f847e0ff6bf9a, type: 3}
+  talkingLoop: {fileID: 0}
   emissivGO: {fileID: 0}
 --- !u!4 &1572530301
 Transform:
@@ -11100,7 +11104,7 @@ MonoBehaviour:
   animator: {fileID: 1702572052}
   talkingBoolName: IsTalking
   audioSource: {fileID: 154425533}
-  talkingLoop: {fileID: 8300000, guid: f8863448964c0164db5f847e0ff6bf9a, type: 3}
+  talkingLoop: {fileID: 8300000, guid: 7e71e600d15a11f40b65d75ac0537e29, type: 3}
   emissivGO: {fileID: 1732504455}
 --- !u!1 &1716217565
 GameObject:
@@ -13010,7 +13014,7 @@ MonoBehaviour:
   animator: {fileID: 2063849507}
   talkingBoolName: IsTalking
   audioSource: {fileID: 154425533}
-  talkingLoop: {fileID: 8300000, guid: f8863448964c0164db5f847e0ff6bf9a, type: 3}
+  talkingLoop: {fileID: 8300000, guid: 7e71e600d15a11f40b65d75ac0537e29, type: 3}
   emissivGO: {fileID: 872625119}
 --- !u!1001 &2079959972
 PrefabInstance:
