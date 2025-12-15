@@ -29,7 +29,9 @@ public class TrackVars : MonoBehaviour
 
     [SerializeField] private GameObject endingGameObject;
 
-    
+    [SerializeField] private GameObject physicalEvidence;
+
+
 
     int previousHysteria = int.MinValue;
     int prevPrudenceFavor = int.MinValue;
@@ -265,6 +267,7 @@ public class TrackVars : MonoBehaviour
             if (currentStage && !previousStage)
             {
                 targetObject.SetActive(true);
+                physicalEvidence.SetActive(false);
                 previousStage = true;
 
             }
@@ -272,6 +275,7 @@ public class TrackVars : MonoBehaviour
             {
 
                 targetObject.SetActive(false);
+                physicalEvidence.SetActive(true);
                 previousStage = false;
 
             }
