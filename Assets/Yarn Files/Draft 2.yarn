@@ -32,18 +32,21 @@ title: intro
 
 
 You had seen many a witch hang. The sight was gruesome, but no more than the burning red of pox or the stench of rotten flesh. No more than anything else you would see in the village.
+<<set $gasp to true>>
 
 
 It was the sound that was most striking. The pull of a stool, the bounce of the rope. The snap of the neckbone. And then the gasping… the horrible, wheezing attempt at one final gulp of life. 
-
+<<set $gasp to false>>
 
 The first time you heard it you were with your son. He had cried, then. Then the next time it happened he had not cried at all.
 
 
 No more do you linger in the depths of memory. You step into the Meeting House. The sound engulfs you. The trial begins.
+<<set $gasp to true>>
 
 
 As the doors close behind you, a gust of summer air blows into the space. Your hair is plastered to your forehead and neck.
+<<set $gasp to false>>
 
 
 <<set $title1 to true>>
@@ -303,10 +306,12 @@ Prudence: When I awoke there were bruises upon my skin and I knew that she had a
 Your daughter, wounded. You cannot stay silent, not now. Even if you wanted to, you would feel the heat of the community’s gaze. A mother’s only job was to care for her children. You cannot help but cry out...
 -> You: "Show me, child."
 -> You: "Let them see what she did to you."
+   <<set $gasp to true>>
    <<set $hysteria to $hysteria + 5>>
 
 
 The magistrates turn towards you. You feel the intensity of everyone’s gaze, and hear whispers around you. You...
+   <<set $gasp to false>>
 -> Hold  their gaze.
    <<set $hysteria to $hysteria + 2>>
 -> Look away.
@@ -327,11 +332,13 @@ Unharmed. You shield her with your body; you’re sure no one else has seen.Then
 
 
 Daniel: This is grave news, indeed. I pray that you heal quickly.
+<<set $gasp to true>>
 <<set $DanielPresent to false>>
 <<set $JohnPresent to true>>
 
 
 John: Did you speak to her that day? Was she cruel in nature?
+<<set $gasp to false>>
 
 
 Prudence: She did not speak to me. But she looked at me with the Devil’s intent. She whispered something as I was falling; I believe it was a spell.
@@ -345,6 +352,7 @@ Daniel: Constable, did you search Esther? Was she found with any belongings?
 
 
 Constable: I did, sir. She had with her two items of witchcraft!
+   <<set $gasp to true>>
    <<set $hysteria to $hysteria + 5>>
    <<set $herbs to true>>
    <<set $letter to true>>
@@ -353,6 +361,7 @@ Constable: I did, sir. She had with her two items of witchcraft!
 
 
 Constable: In her kitchen cupboard she had next to a spool of decadent thread a bundle of herbs; one can only presume her midwifery was but an excuse to enchant our women with potions!
+<<set $gasp to false>>
 
 
 Daniel: And what of the other items, Constable?
@@ -411,11 +420,13 @@ You recognize the voice. It's Laura Adams, your neighbor, and Esther’s apprent
 <<set $ConstablePresent to true>>
 
 Constable: Only a guilty woman flees!
+<<set $gasp to true>>
 <<set $LauraPresent to false>>
 
 
 
 John: Steel yourselves, men. We will hear from the witch herself. 
+<<set $gasp to false>>
 <<set $EstherPresent to true>>
 
 John: Mrs. Esther. What do you have to say about this accusation?
@@ -458,6 +469,7 @@ You call out...
 title: condemn
 ---
 The crowd speaks up, supporting your words.
+<<set $whispers to true>>
 
 
 Stonemason: The Crone’s guilty!
@@ -472,12 +484,14 @@ Neighbor: Trial, trial!
 Fisherman: She’s absolutely right!
    <<set $hysteria to $hysteria + 1>>
    <<jump examEnd>>
+   <<set $whispers to false>>
 ===
 
 
 title: fair
 ---
 The crowd murmurs.
+<<set $whispers to true>>
 
 
 Stonemason: She speaks the truth.
@@ -485,16 +499,19 @@ Stonemason: She speaks the truth.
 
 Fisherman: Get on with it!
    <<jump examEnd>>
+   <<set $whispers to false>>
 ===
 
 
 title: pensive
 ---
 Stonemason: What? Why would she protect the witch?
+<<set $whispers to true>>
 
 
 Fisherman: It's not right!
 <<jump examEnd>>
+<<set $whispers to false>>
 ===
 
 
@@ -570,6 +587,7 @@ You: I affirm Prudence. This, and I would uphold my faith. Even now Esther keeps
 
 
 The crowd reacts and whispers.
+<<set $whispers to true>>
 
 
 Girl: But what about you? You should have protected her!
@@ -577,6 +595,7 @@ Girl: But what about you? You should have protected her!
 
 Boy: She speaks suspiciously...
 <<jump push>>
+<<set $whispers to false>>
 ===
 
 
@@ -585,9 +604,11 @@ title: push
 
 
 John: SILENCE!
+<<set $gasp to true>>
 
 
 John: Ruth, your child suffers. Did you know of Esther’s true intent? Would you not seek to protect your child from such a force?
+<<set $gasp to false>>
 
 
 What can you say to that?
@@ -610,23 +631,29 @@ What can you say to that?
 title: losingGround
 ---
 Boy: Hogwash! She surely knew!
+<<set $whispers to true>>
 Girl: She’s a witch too!
 Neighbor: Burn, burn!
 <<jump conclusion>>
+<<set $whispers to false>>
 ===
 
 
 title: fairGround
 ---
+<<set $whispers to true>>
 Boy: Justice must be served!
 <<jump conclusion>>
+<<set $whispers to false>>
 ===
 
 
 title: gainingGround
 ---
+<<set $whispers to true>>
 The crowd roars in approval.
 <<jump conclusion>>
+<<set $whispers to false>>
 ===
 
 
@@ -691,12 +718,14 @@ John: Indeed. They came to us privately to request that their voice be heard dur
 
 
 …and you are guilty.
+<<set $gasp to true>>
 
 
 Ruth: My love, you know that’s not…
 
 
 If you give any indication that you are afraid then you might as well tie your own noose. You say...
+<<set $gasp to false>>
 -> You: "I saw Oliver, the baker."
    <<set $witness to "Oliver">>
    <<jump Oliver>>

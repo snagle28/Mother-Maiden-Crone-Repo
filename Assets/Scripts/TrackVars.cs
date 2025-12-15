@@ -6,6 +6,8 @@ using System.Collections.Generic;
 
 public class TrackVars : MonoBehaviour
 {
+    //added audio source ref for paper sounds
+    public AudioSource audioSource;
     [Header("Yarn References")]
     [SerializeField] private DialogueRunner dialogueRunner;
     public InMemoryVariableStorage variableStorage;
@@ -56,6 +58,8 @@ public class TrackVars : MonoBehaviour
     bool prevTitle2Present = false;
     bool prevTitle3Present = false;
     bool prevEndingTitlePresent = false;
+    bool hasGasped = false;
+    bool hasWhispers = false;
 
     bool prevEnding = false;
 
@@ -217,6 +221,40 @@ public class TrackVars : MonoBehaviour
         TitleEffects("$endGame", ref prevEndingTitlePresent, EndObject);
 
         CheckEnding();
+
+    }
+
+    void CheckSound()
+    {
+        if (variableStorage.TryGetValue(variableName: "$gasp", out bool isGasping))
+        {
+            //check if the value changed from false to true
+            if (isGasping && !hasGasped)
+            {
+                Debug.Log($"sound playing");
+                audioSource.Play();
+                hasGasped = true;
+            }
+            else if (!isGasping)
+            {
+                hasGasped = false;
+            }
+        }
+
+        if (variableStorage.TryGetValue(variableName: "$whisper", out bool isWhispering))
+        {
+            //check if the value changed from false to true
+            if (isWhispering && !hasWhispers)
+            {
+                Debug.Log($"sound playing");
+                audioSource.Play();
+                hasWhispers = true;
+            }
+            else if (!isWhispering)
+            {
+                hasWhispers = false;
+            }
+        }
 
     }
 
